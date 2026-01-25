@@ -1,0 +1,355 @@
+/* ========= RESET ========= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg,#0f172a,#1e293b);
+  color:white;
+  line-height:1.6;
+  padding-bottom:50px;
+}
+
+/* ========= HERO ========= */
+.hero{
+  text-align:center;
+  padding:60px 20px;
+  animation: fadeDown 1s ease;
+}
+
+.name{
+  font-size:40px;
+  font-weight:700;
+  margin-bottom:10px;
+  color:cyan;
+}
+
+.tagline{
+  margin:10px 0 20px;
+  font-size:18px;
+  opacity:0.9;
+}
+
+/* ========= PROFILE PIC ========= */
+.profile-pic{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid cyan;
+  box-shadow:0 0 25px cyan;
+  margin:20px 0;
+  transition:0.4s;
+}
+
+.profile-pic:hover{
+  transform:scale(1.08);
+}
+
+/* ========= CONTACT ========= */
+.contact-row a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+}
+
+.contact-row a:hover{
+  color:cyan;
+}
+
+/* ========= BUTTONS ========= */
+.btn, .btn-outline{
+  padding:10px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  margin:5px;
+  font-weight:bold;
+  display:inline-block;
+  transition:0.3s;
+}
+
+.btn{
+  background:cyan;
+  color:black;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+.btn-outline{
+  border:2px solid cyan;
+  color:cyan;
+}
+
+.btn-outline:hover{
+  background:cyan;
+  color:black;
+}
+
+/* ========= CARD SECTIONS ========= */
+.card{
+  background:#1e293b;
+  margin:30px auto;
+  padding:25px;
+  border-radius:12px;
+  width:90%;
+  max-width:1000px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.5);
+  animation: fadeUp 1s ease;
+}
+
+.card h2{
+  margin-bottom:15px;
+  color:cyan;
+}
+
+/* ========= LIST ========= */
+ul{
+  margin-left:20px;
+}
+
+/* ========= SKILLS GRID ========= */
+.skill-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.skill-card{
+  background:#0f172a;
+  padding:15px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.skill-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 15px cyan;
+}
+
+/* ========= PROJECT GRID ========= */
+.project-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.project-card{
+  background:#0f172a;
+  padding:15px;
+  border-radius:12px;
+  transition:0.3s;
+  text-align:center;
+}
+
+.project-card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+.project-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 20px cyan;
+}
+
+/* ========= PROJECT BUTTONS ========= */
+.project-btn, .demo-btn{
+  padding:8px 14px;
+  margin:6px;
+  border-radius:6px;
+  text-decoration:none;
+  display:inline-block;
+  font-size:14px;
+}
+
+.project-btn{
+  background:cyan;
+  color:black;
+}
+
+.demo-btn{
+  border:2px solid cyan;
+  color:cyan;
+}
+
+/* ========= SOFT SKILLS ========= */
+.soft-list li{
+  margin:6px 0;
+}
+
+/* ========= FOOTER ========= */
+.footer{
+  text-align:center;
+  margin-top:40px;
+  opacity:0.7;
+}
+
+/* ========= ANIMATIONS ========= */
+@keyframes fadeDown{
+  from{opacity:0; transform:translateY(-40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* Glow circle behind photo */
+.profile-pic{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #00c9a7;
+    box-shadow: 0 0 25px #00c9a7, 0 0 60px rgba(0,201,167,0.4);
+    margin-top: 15px;
+}
+
+/* Name styling */
+.name{
+    font-size: 40px;
+    font-weight: bold;
+    color: #00e6c0;
+    margin-bottom: 10px;
+}
+
+/* Tagline text */
+.tagline{
+    font-size: 18px;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+/* ================= BUTTONS (Resume / ATS / GitHub) ================= */
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn,
+.btn-outline{
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* Solid button (Resume) */
+.btn{
+    background: #00c9a7;
+    color: black;
+}
+
+.btn:hover{
+    background: #00e6c0;
+    transform: translateY(-2px);
+}
+
+/* Outline button (ATS + GitHub) */
+.btn-outline{
+    border: 2px solid #00c9a7;
+    color: #00c9a7;
+}
+
+.btn-outline:hover{
+    background: #00c9a7;
+    color: black;
+    transform: translateY(-2px);
+}
+
+/* ================= PREMIUM POLISH EFFECTS ================= */
+
+/* Smooth scroll */
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* Card hover lift */
+.card{
+    transition: 0.35s ease;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+}
+
+
+/* Button glow hover */
+.btn:hover,
+.btn-outline:hover{
+    box-shadow: 0 0 18px #00c9a7;
+}
+
+
+/* Soft fade animation on load */
+.card{
+    animation: fadeUp 0.6s ease;
+}
+
+
+/* Hero content animation */
+.hero h1,
+.hero .tagline,
+.contact-row,
+.buttons{
+    animation: fadeDown 0.8s ease;
+}
+
+
+/* Typing text glow */
+#typing{
+    color: #00e6c0;
+    font-weight: 600;
+}
+
+
+/* Scrollbar styling (pro look) */
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background: #0f2027;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #00c9a7;
+    border-radius: 10px;
+}
+
+/* ================= TYPING EFFECT FINAL ================= */
+
+#typing{
+    color: #00e6c0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px #00e6c0, 0 0 15px #00e6c0;
+}
+
+/* blinking cursor */
+#typing::after{
+    content: "|";
+    margin-left: 6px;
+    animation: blink 1s infinite;
+}
+
+/* cursor animation */
+@keyframes blink{
+    0%,100%{opacity:1;}
+    50%{opacity:0;}
+}
