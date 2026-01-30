@@ -1798,3 +1798,30 @@ section{
   width:96%;
   max-width:1500px;
 }
+.card{
+  width:100%;          /* FULL WIDTH */
+  max-width:none;      /* REMOVE LIMIT */
+  margin:40px 0;       /* no side margin */
+
+  padding:40px 60px;   /* only inside spacing */
+
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(14px);
+
+  border-radius:0;     /* edge-to-edge look */
+
+  border-top:1px solid rgba(0,255,255,.15);
+  border-bottom:1px solid rgba(0,255,255,.15);
+
+  box-shadow:0 0 30px rgba(0,255,255,.15);
+}
+section{
+  width:100%;
+}
+hero-card{
+  width:100%;
+  max-width:none;
+  margin-top:30px;
+  padding:40px 60px;
+  border-radius:0;
+}
