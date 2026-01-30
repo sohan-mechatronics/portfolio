@@ -896,3 +896,77 @@ section{
   gap: 18px;
   margin-top: 20px;
 }
+/* =================================
+   🔥 FINAL HORIZONTAL LAYOUT FIX
+================================= */
+
+
+/* =========================
+   SECTION 2 CARDS SIDE-BY-SIDE
+========================= */
+
+section.card{
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+  margin: 10px 1%;
+}
+
+
+/* responsive (mobile auto stack) */
+@media(max-width:900px){
+  section.card{
+    width:100%;
+  }
+}
+
+
+/* =========================
+   SOFT SKILLS HORIZONTAL ITEMS
+========================= */
+
+.soft-grid{
+  display: flex;          /* 👈 grid hatao, flex use karo */
+  flex-wrap: wrap;       /* next line allowed */
+  gap: 15px;
+  margin-top: 18px;
+}
+
+
+/* each skill box */
+.soft-item{
+  flex: 0 0 auto;        /* no shrink */
+  min-width: 260px;      /* fixed card size */
+}
+
+
+/* optional: tighter look */
+.soft-item{
+  padding: 14px 18px;
+}
+/* outline buttons (GitHub / Portfolio) */
+
+.btn-outline{
+  background: rgba(255,255,255,0.15);
+  color: #ffffff;
+
+  border: 1.5px solid rgba(255,255,255,0.55);
+
+  padding: 12px 22px;
+  border-radius: 10px;
+
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+
+  transition: 0.3s;
+}
+
+
+/* hover glow */
+.btn-outline:hover{
+  background: #00ffe7;
+  color: #003b38;
+
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px #00ffe7;
+}
