@@ -461,3 +461,71 @@ padding:25px;
   flex-wrap:wrap;
   justify-content:center;
 }
+/* ================= HERO ================= */
+
+.hero{
+  text-align:center;
+  padding:90px 20px;
+  position:relative;
+}
+
+/* single glass card */
+.hero-card{
+  margin-top:35px;
+  padding:30px 25px;
+  max-width:750px;
+  margin-left:auto;
+  margin-right:auto;
+
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(14px);
+
+  border-radius:18px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.25);
+
+  transition:0.3s;
+}
+
+.hero-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 40px rgba(0,0,0,0.35);
+}
+
+
+/* skills text */
+.hero-sub{
+  margin-bottom:20px;
+  font-size:17px;
+  font-weight:500;
+}
+
+
+/* contact row */
+.contact-row{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+  margin-bottom:22px;
+}
+
+.contact-btn{
+  color:white;
+  text-decoration:none;
+  padding:8px 14px;
+  border-radius:8px;
+  transition:0.25s;
+}
+
+.contact-btn:hover{
+  background:rgba(255,255,255,0.15);
+}
+
+
+/* buttons */
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
