@@ -24,66 +24,60 @@
 
 <body>
 <!-- ================= HERO / HEADER ================= -->
-<!-- ================= HERO / HEADER ================= -->
 <header class="hero">
 
-    <!-- Glow background -->
-    <div class="hero-bg"></div>
+  <!-- Glow background -->
+  <div class="hero-bg"></div>
 
-    <!-- Profile -->
-    <img src="assets/Photo.jpg" alt="Sohan Kumar" class="profile-pic">
+  <!-- Photo -->
+  <img src="assets/Photo.jpg" alt="Sohan Kumar" class="profile-pic">
 
-    <h1 class="name">SOHAN KUMAR</h1>
+  <!-- Name -->
+  <h1 class="name">SOHAN KUMAR</h1>
 
-    <!-- Typing Role -->
-    <p class="tagline">
-        <span id="typing"></span>
+  <!-- Typing Role -->
+  <p class="tagline">
+    <span id="typing"></span>
+  </p>
+
+
+  <!-- ===== SINGLE CLEAN CARD ===== -->
+  <div class="hero-card">
+
+    <!-- Skills line -->
+    <p class="hero-sub">
+      Electrical • Mechatronics • PLC • Automation • Robotics
     </p>
 
+    <!-- Contact buttons -->
+    <div class="contact-row">
 
-    <!-- ===== SINGLE HERO CARD ===== -->
-    <div class="hero-card">
+      <a href="mailto:sohan.career2001@gmail.com" class="contact-btn">
+        <i class="fas fa-envelope"></i> Email
+      </a>
 
-        <!-- Skills -->
-        <p class="hero-sub">
-            Electrical • Mechatronics • PLC • Automation • Robotics
-        </p>
+      <a href="tel:+917261809804" class="contact-btn">
+        <i class="fas fa-phone"></i> Call
+      </a>
 
-        <!-- Contact Row -->
-        <div class="contact-row">
-
-            <a href="mailto:sohan.career2001@gmail.com" class="contact-btn">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-
-            <a href="tel:+917261809804" class="contact-btn">
-                <i class="fas fa-phone"></i> Call
-            </a>
-
-            <a href="https://linkedin.com/in/sohan-kumar-eng" target="_blank" class="contact-btn">
-                <i class="fab fa-linkedin-in"></i> LinkedIn
-            </a>
-
-        </div>
-
-        <!-- Action Buttons -->
-        <div class="buttons">
-
-            <a href="resume/resume.pdf" target="_blank" class="btn">
-                Resume
-            </a>
-
-            <a href="https://github.com/sohan-mechatronics" target="_blank" class="btn-outline">
-                GitHub
-            </a>
-
-            <a href="https://sohan-mechatronics.github.io/portfolio/" target="_blank" class="btn-outline">
-                Portfolio
-            </a>
-
-        </div>
+      <a href="https://linkedin.com/in/sohan-kumar-eng" target="_blank" class="contact-btn">
+        <i class="fab fa-linkedin-in"></i> LinkedIn
+      </a>
 
     </div>
+
+    <!-- Action buttons -->
+    <div class="buttons">
+
+      <a href="resume/resume.pdf" target="_blank" class="btn">Resume</a>
+
+      <a href="https://github.com/sohan-mechatronics" target="_blank" class="btn-outline">GitHub</a>
+
+      <a href="https://sohan-mechatronics.github.io/portfolio/" target="_blank" class="btn-outline">Portfolio</a>
+
+    </div>
+
+  </div>
 
 </header>
 
@@ -430,7 +424,7 @@ function type() {
     i = (i + 1) % roles.length;
   }
 
-  setTimeout(type, isDeleting ? 40 : 80);
+  setTimeout(type, isDeleting ? 30 : 70);
 }
  type();
 </script>

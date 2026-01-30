@@ -529,3 +529,216 @@ padding:25px;
   gap:15px;
   flex-wrap:wrap;
 }
+/* HERO */
+.hero{
+  text-align:center;
+  padding:120px 20px 80px;
+  position:relative;
+}
+
+
+/* PHOTO */
+.profile-pic{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:18px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.35);
+}
+
+
+/* NAME */
+.name{
+  font-size:48px;
+  margin-bottom:10px;
+}
+
+
+/* GLASS CARD */
+.hero-card{
+  margin:25px auto 0;
+  padding:30px 25px;
+  max-width:720px;
+
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(14px);
+
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+
+  transition:0.3s;
+}
+
+.hero-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.35);
+}
+
+
+/* SKILL LINE */
+.hero-sub{
+  font-weight:600;
+  margin-bottom:18px;
+}
+
+
+/* CONTACT */
+.contact-row{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.contact-btn{
+  background:rgba(255,255,255,0.12);
+  padding:8px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+.contact-btn:hover{
+  background:rgba(255,255,255,0.25);
+}
+
+
+/* BUTTONS */
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  background:#00e5ff;
+  color:black;
+  padding:9px 18px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.btn-outline{
+  border:1px solid #00e5ff;
+  color:#00e5ff;
+  padding:9px 18px;
+  border-radius:8px;
+  text-decoration:none;
+}
+/* ============================= */
+/* 🔥 HERO PREMIUM ANIMATIONS    */
+/* ============================= */
+
+
+/* Fade in whole hero */
+.hero{
+  animation: fadeHero 1.2s ease forwards;
+  opacity:0;
+}
+
+@keyframes fadeHero{
+  to{opacity:1;}
+}
+
+
+/* ============================= */
+/* Glow animated name            */
+/* ============================= */
+
+.name{
+  background:linear-gradient(90deg,#ffffff,#00e5ff,#ffffff);
+  background-size:200% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  animation: glowText 4s linear infinite;
+}
+
+@keyframes glowText{
+  0%{background-position:0%}
+  100%{background-position:200%}
+}
+
+
+/* ============================= */
+/* Floating photo                */
+/* ============================= */
+
+.profile-pic{
+  animation: floatPic 4s ease-in-out infinite;
+}
+
+@keyframes floatPic{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+
+/* ============================= */
+/* Glass card glow hover         */
+/* ============================= */
+
+.hero-card{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius:20px;
+
+  background:linear-gradient(45deg,#00e5ff,#00bcd4,#00e5ff);
+  opacity:0;
+  transition:0.4s;
+  z-index:-1;
+}
+
+.hero-card:hover::before{
+  opacity:0.6;
+  filter:blur(18px);
+}
+
+
+/* ============================= */
+/* Typing cursor blink           */
+/* ============================= */
+
+#typing::after{
+  content:"|";
+  margin-left:5px;
+  animation:blink 1s infinite;
+}
+
+@keyframes blink{
+  0%,50%,100%{opacity:1}
+  25%,75%{opacity:0}
+}
+
+
+/* ============================= */
+/* Animated gradient background  */
+/* ============================= */
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+
+  background:linear-gradient(120deg,#008b8b,#00bcd4,#009688);
+  background-size:300% 300%;
+
+  animation:bgMove 10s ease infinite;
+}
+
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
