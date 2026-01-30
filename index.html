@@ -258,11 +258,12 @@ Scheduled for 5th semester development.
 <!-- ================= Typing Animation ================= -->
   <script>
 const roles = [
+  "Hi, I'm Sohan 👋",
   "Electrical Engineer ⚡",
   "Mechatronics Engineer 🤖",
   "Robotics & Automation Enthusiast ⚙️",
   "PLC | Control Systems Learner 🔧"
-]
+  ]
 
 let i = 0;
 let j = 0;
@@ -283,7 +284,7 @@ function type() {
 
   if (!isDeleting && j === current.length) {
     isDeleting = true;
-    setTimeout(type, 1000);
+    setTimeout(type, i === 0 ? 150 : 80);
     return;
   }
 
