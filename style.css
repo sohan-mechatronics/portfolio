@@ -409,3 +409,55 @@ h2{
     box-shadow: 0 0 18px #00ffe7;
     background: rgba(255,255,255,0.18);
 }
+padding:25px;
+  border-radius:20px;
+
+  text-align:center;
+
+  box-shadow:0 0 25px rgba(0,255,231,0.15);
+
+  transition:0.35s;
+}
+
+.hero-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 55px rgba(0,255,231,0.55);
+}
+
+
+/* ===== MAIN CARD ===== */
+
+.main-card{
+  padding:40px 20px;
+}
+
+.profile-pic{
+  width:120px;
+  border-radius:50%;
+  margin-bottom:15px;
+}
+
+
+/* ===== CONTACT LINKS ===== */
+
+.contact-card{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.contact-card a{
+  color:white;
+  text-decoration:none;
+}
+
+
+/* ===== ACTION BUTTONS ===== */
+
+.action-card{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
