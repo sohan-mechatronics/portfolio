@@ -1507,3 +1507,54 @@ section{
   box-shadow:0 0 30px rgba(0,255,255,.15);
   border-radius:20px;
 }
+/* =========================================
+   🎯 MASTER CENTER ALIGN FIX (GLOBAL)
+========================================= */
+
+/* sab sections ko perfect center */
+section{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+/* card always exact center */
+.card{
+  width:100%;
+  max-width:1000px;   /* professional centered width */
+  margin:60px auto;
+  text-align:center;  /* headings + text center */
+}
+
+/* all headings center */
+.card h2,
+.card h3{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+/* grids bhi center */
+.project-grid,
+.skill-grid,
+.edu-grid,
+.foundation-grid,
+.soft-list{
+  justify-content:center;
+  align-items:stretch;
+}
+
+/* small cards content center */
+.project-card,
+.skill-card,
+.edu-item,
+.foundation-item,
+.soft-list li{
+  text-align:center;
+}
+
+/* footer center */
+.footer{
+  text-align:center;
+  display:flex;
+  justify-content:center;
+}
