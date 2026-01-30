@@ -1772,3 +1772,29 @@ section{
   display:flex;
   justify-content:center;
 }
+.hero{
+  padding:60px 0;   /* REMOVE side gap */
+}
+.hero-card{
+  width:95%;
+  max-width:1400px;
+  margin:30px auto;
+
+  padding:40px;
+
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(14px);
+
+  border-radius:22px;
+
+  box-shadow:0 0 40px rgba(0,255,255,.3);
+}
+section{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+.card{
+  width:96%;
+  max-width:1500px;
+}
