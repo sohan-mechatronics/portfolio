@@ -353,3 +353,175 @@ html{
     0%,100%{opacity:1;}
     50%{opacity:0;}
 }
+9/* ===============================
+   🚀 PROJECT SECTION STYLING
+================================ */
+
+/* grid layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+/* card look */
+.project-card {
+    background: #111;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid #1f1f1f;
+}
+
+/* hover animation */
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 18px #00ffcc;
+}
+
+/* title */
+.project-card h3 {
+    color: #00ffcc;
+    margin-bottom: 10px;
+}
+
+/* description */
+.project-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* status tags */
+.tag {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+/* colors */
+.done {
+    background: #0a3;
+}
+
+.progress {
+    background: #c9a000;
+}
+
+.plan {
+    background: #444;
+}
+/* =====================================================
+   🚀 PORTFOLIO PRO UPGRADE PACK
+   Hover + Neon + Bars + Button + Dark Theme
+===================================================== */
+
+/* ---------- 🌌 Dark Neon Background ---------- */
+body{
+    background: #0a0f1c;
+    color: #e6f1ff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+/* ---------- 🟩 PROJECT GRID ---------- */
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+
+/* ---------- 💳 PROJECT CARD ---------- */
+.project-card{
+    background: #111827;
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid #1f2937;
+
+    transition: all 0.35s ease;
+}
+
+
+/* ✨ Hover animation */
+.project-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px #00ffcc55;
+    border-color: #00ffcc;
+}
+
+
+/* ---------- 🏷 STATUS TAGS ---------- */
+.tag{
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.done{
+    background: #16a34a;
+}
+
+.progress{
+    background: #eab308;
+    color: black;
+}
+
+.plan{
+    background: #6b7280;
+}
+
+
+/* ---------- 📊 SKILL PROGRESS BARS ---------- */
+.skill{
+    margin-bottom: 18px;
+}
+
+.bar{
+    height: 10px;
+    background: #1f2937;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fill{
+    height: 100%;
+    background: linear-gradient(90deg,#00ffcc,#00aaff);
+    width: 0;
+    animation: fillAnim 2s forwards;
+}
+
+@keyframes fillAnim{
+    from{width:0;}
+}
+
+
+/* ---------- 📄 RESUME BUTTON ---------- */
+.btn{
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #00ffcc;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: #00e6b8;
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+
+/* ---------- 🖼 PROJECT IMAGES ---------- */
+.project-card img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
