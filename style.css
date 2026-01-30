@@ -1,672 +1,211 @@
-/* ========= RESET ========= */
+/* ================= GLOBAL ================= */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family:'Poppins',sans-serif;
 }
 
 body{
-  background: linear-gradient(135deg,#0f172a,#1e293b);
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
   color:white;
-  line-height:1.6;
-  padding-bottom:50px;
+  scroll-behavior:smooth;
+  overflow-x:hidden;
 }
 
-/* ========= HERO ========= */
+/* ================= HERO ================= */
 .hero{
   text-align:center;
-  padding:60px 20px;
-  animation: fadeDown 1s ease;
+  padding:100px 20px;
+  position:relative;
 }
 
-.name{
-  font-size:40px;
-  font-weight:700;
-  margin-bottom:10px;
-  color:cyan;
+/* glow background */
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at 30% 30%,#00ffe0aa,transparent),
+              radial-gradient(circle at 70% 60%,#00aaffaa,transparent);
+  filter: blur(120px);
+  z-index:-1;
 }
 
-.tagline{
-  margin:10px 0 20px;
-  font-size:18px;
-  opacity:0.9;
-}
-
-/* ========= PROFILE PIC ========= */
 .profile-pic{
-  width:160px;
-  height:160px;
+  width:170px;
+  height:170px;
   border-radius:50%;
   object-fit:cover;
-  border:4px solid cyan;
-  box-shadow:0 0 25px cyan;
-  margin:20px 0;
+  border:4px solid #00e5ff;
+  box-shadow:0 0 40px #00e5ff;
   transition:0.4s;
 }
 
 .profile-pic:hover{
-  transform:scale(1.08);
+  transform:scale(1.07);
 }
 
-/* ========= CONTACT ========= */
-.contact-row a{
-  color:white;
-  margin:0 10px;
-  text-decoration:none;
+.name{
+  font-size:42px;
+  font-weight:700;
+  margin-top:20px;
 }
 
-.contact-row a:hover{
-  color:cyan;
+.tagline{
+  font-size:22px;
+  color:#00ffd5;
+  margin-top:10px;
 }
 
-/* ========= BUTTONS ========= */
-.btn, .btn-outline{
-  padding:10px 20px;
+.hero-sub{
+  opacity:0.8;
+  margin:10px 0 25px;
+}
+
+/* ================= BUTTONS ================= */
+.buttons{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn,.btn-outline{
+  padding:10px 18px;
   border-radius:8px;
   text-decoration:none;
-  margin:5px;
-  font-weight:bold;
-  display:inline-block;
-  transition:0.3s;
-}
-
-.btn{
-  background:cyan;
-  color:black;
-}
-
-.btn:hover{
-  transform:translateY(-3px);
-}
-
-.btn-outline{
-  border:2px solid cyan;
-  color:cyan;
-}
-
-.btn-outline:hover{
-  background:cyan;
-  color:black;
-}
-
-/* ========= CARD SECTIONS ========= */
-.card{
-  background:#1e293b;
-  margin:30px auto;
-  padding:25px;
-  border-radius:12px;
-  width:90%;
-  max-width:1000px;
-  box-shadow:0 8px 25px rgba(0,0,0,0.5);
-  animation: fadeUp 1s ease;
-}
-
-.card h2{
-  margin-bottom:15px;
-  color:cyan;
-}
-
-/* ========= LIST ========= */
-ul{
-  margin-left:20px;
-}
-
-/* ========= SKILLS GRID ========= */
-.skill-grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
-
-.skill-card{
-  background:#0f172a;
-  padding:15px;
-  border-radius:10px;
-  transition:0.3s;
-}
-
-.skill-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 0 15px cyan;
-}
-
-/* ========= PROJECT GRID ========= */
-.project-grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
-}
-
-.project-card{
-  background:#0f172a;
-  padding:15px;
-  border-radius:12px;
-  transition:0.3s;
-  text-align:center;
-}
-
-.project-card img{
-  width:100%;
-  border-radius:10px;
-  margin-bottom:10px;
-}
-
-.project-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 0 20px cyan;
-}
-
-/* ========= PROJECT BUTTONS ========= */
-.project-btn, .demo-btn{
-  padding:8px 14px;
-  margin:6px;
-  border-radius:6px;
-  text-decoration:none;
-  display:inline-block;
   font-size:14px;
+  transition:0.3s;
 }
 
-.project-btn{
-  background:cyan;
-  color:black;
-}
-
-.demo-btn{
-  border:2px solid cyan;
-  color:cyan;
-}
-
-/* ========= SOFT SKILLS ========= */
-.soft-list li{
-  margin:6px 0;
-}
-
-/* ========= FOOTER ========= */
-.footer{
-  text-align:center;
-  margin-top:40px;
-  opacity:0.7;
-}
-
-/* ========= ANIMATIONS ========= */
-@keyframes fadeDown{
-  from{opacity:0; transform:translateY(-40px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(40px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
-/* Glow circle behind photo */
-.profile-pic{
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #00c9a7;
-    box-shadow: 0 0 25px #00c9a7, 0 0 60px rgba(0,201,167,0.4);
-    margin-top: 15px;
-}
-
-/* Name styling */
-.name{
-    font-size: 40px;
-    font-weight: bold;
-    color: #00e6c0;
-    margin-bottom: 10px;
-}
-
-/* Tagline text */
-.tagline{
-    font-size: 18px;
-    opacity: 0.9;
-    margin-top: 10px;
-}
-
-/* ================= BUTTONS (Resume / ATS / GitHub) ================= */
-
-.buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    width: 100%;
-}
-
-.btn,
-.btn-outline{
-    padding: 10px 22px;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
-
-/* Solid button (Resume) */
 .btn{
-    background: #00c9a7;
-    color: black;
+  background:#00e5ff;
+  color:black;
+  font-weight:600;
 }
 
 .btn:hover{
-    background: #00e6c0;
-    transform: translateY(-2px);
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px #00e5ff;
 }
 
-/* Outline button (ATS + GitHub) */
 .btn-outline{
-    border: 2px solid #00c9a7;
-    color: #00c9a7;
+  border:1px solid #00e5ff;
+  color:#00e5ff;
 }
 
 .btn-outline:hover{
-    background: #00c9a7;
-    color: black;
-    transform: translateY(-2px);
+  background:#00e5ff;
+  color:black;
 }
 
-/* ================= PREMIUM POLISH EFFECTS ================= */
-
-/* Smooth scroll */
-html{
-    scroll-behavior: smooth;
-}
-
-
-/* Card hover lift */
+/* ================= CARDS ================= */
 .card{
-    transition: 0.35s ease;
+  margin:60px auto;
+  padding:40px;
+  width:90%;
+  max-width:1100px;
+
+  backdrop-filter:blur(18px);
+  background:rgba(255,255,255,0.06);
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.1);
+
+  transition:0.4s;
+  animation:fadeUp 0.9s ease;
 }
 
 .card:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.5);
 }
 
-
-/* Button glow hover */
-.btn:hover,
-.btn-outline:hover{
-    box-shadow: 0 0 18px #00c9a7;
+h2{
+  margin-bottom:25px;
+  font-size:26px;
+  color:#00ffd5;
 }
 
-
-/* Soft fade animation on load */
-.card{
-    animation: fadeUp 0.6s ease;
+/* ================= GRID ================= */
+.skill-grid,
+.edu-grid,
+.project-grid,
+.foundation-grid,
+.ach-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
 }
 
-
-/* Hero content animation */
-.hero h1,
-.hero .tagline,
-.contact-row,
-.buttons{
-    animation: fadeDown 0.8s ease;
-}
-
-
-/* Typing text glow */
-#typing{
-    color: #00e6c0;
-    font-weight: 600;
-}
-
-
-/* Scrollbar styling (pro look) */
-::-webkit-scrollbar{
-    width: 8px;
-}
-
-::-webkit-scrollbar-track{
-    background: #0f2027;
-}
-
-::-webkit-scrollbar-thumb{
-    background: #00c9a7;
-    border-radius: 10px;
-}
-
-/* ================= TYPING EFFECT FINAL ================= */
-
-#typing{
-    color: #00e6c0;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-shadow: 0 0 8px #00e6c0, 0 0 15px #00e6c0;
-}
-
-/* blinking cursor */
-#typing::after{
-    content: "|";
-    margin-left: 6px;
-    animation: blink 1s infinite;
-}
-
-/* cursor animation */
-@keyframes blink{
-    0%,100%{opacity:1;}
-    50%{opacity:0;}
-}
-9/* ===============================
-   🚀 PROJECT SECTION STYLING
-================================ */
-
-/* grid layout */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 25px;
-}
-
-/* card look */
-.project-card {
-    background: #111;
-    padding: 20px;
-    border-radius: 12px;
-    transition: 0.3s;
-    border: 1px solid #1f1f1f;
-}
-
-/* hover animation */
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0 18px #00ffcc;
-}
-
-/* title */
-.project-card h3 {
-    color: #00ffcc;
-    margin-bottom: 10px;
-}
-
-/* description */
-.project-card p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #ccc;
-}
-
-/* status tags */
-.tag {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 10px;
-    font-size: 12px;
-    border-radius: 6px;
-}
-
-/* colors */
-.done {
-    background: #0a3;
-}
-
-.progress {
-    background: #c9a000;
-}
-
-.plan {
-    background: #444;
-}
-/* =====================================================
-   🚀 PORTFOLIO PRO UPGRADE PACK
-   Hover + Neon + Bars + Button + Dark Theme
-===================================================== */
-
-/* ---------- 🌌 Dark Neon Background ---------- */
-body{
-    background: #0a0f1c;
-    color: #e6f1ff;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-
-/* ---------- 🟩 PROJECT GRID ---------- */
-.project-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-    gap: 25px;
-    margin-top: 25px;
-}
-
-
-/* ---------- 💳 PROJECT CARD ---------- */
-.project-card{
-    background: #111827;
-    padding: 22px;
-    border-radius: 14px;
-    border: 1px solid #1f2937;
-
-    transition: all 0.35s ease;
-}
-
-
-/* ✨ Hover animation */
-.project-card:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 0 25px #00ffcc55;
-    border-color: #00ffcc;
-}
-
-
-/* ---------- 🏷 STATUS TAGS ---------- */
-.tag{
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.done{
-    background: #16a34a;
-}
-
-.progress{
-    background: #eab308;
-    color: black;
-}
-
-.plan{
-    background: #6b7280;
-}
-
-
-/* ---------- 📊 SKILL PROGRESS BARS ---------- */
-.skill{
-    margin-bottom: 18px;
-}
-
-.bar{
-    height: 10px;
-    background: #1f2937;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.fill{
-    height: 100%;
-    background: linear-gradient(90deg,#00ffcc,#00aaff);
-    width: 0;
-    animation: fillAnim 2s forwards;
-}
-
-@keyframes fillAnim{
-    from{width:0;}
-}
-
-
-/* ---------- 📄 RESUME BUTTON ---------- */
-.btn{
-    padding: 10px 18px;
-    border-radius: 8px;
-    background: #00ffcc;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.btn:hover{
-    background: #00e6b8;
-    box-shadow: 0 0 15px #00ffcc;
-}
-
-
-/* ---------- 🖼 PROJECT IMAGES ---------- */
-.project-card img{
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 12px;
-}
-* ===============================
-   ✨ FINAL PORTFOLIO UPGRADES
-   =============================== */
-
-
-/* ✅ Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-
-/* ✅ Typing blinking cursor */
-#typing::after {
-  content: "|";
-  margin-left: 5px;
-  animation: blink 1s infinite;
-  color: #00ffcc;
-}
-
-@keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
-}
-
-
-/* ✅ Card hover animation */
-.card,
+/* ================= SMALL CARDS ================= */
+.skill-card,
 .project-card,
-.skill-card {
-  transition: all 0.3s ease;
+.edu-item,
+.foundation-item,
+.ach-item{
+  padding:18px;
+  border-radius:12px;
+  background:rgba(255,255,255,0.08);
+  transition:0.3s;
 }
 
-.card:hover,
+.skill-card:hover,
 .project-card:hover,
-.skill-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px rgba(0,255,200,0.4);
+.edu-item:hover,
+.foundation-item:hover,
+.ach-item:hover{
+  transform:translateY(-6px);
+  background:rgba(0,255,255,0.15);
 }
 
-
-/* ✅ Resume button glow */
-.resume-btn {
-  background: #00ffcc;
-  color: black;
-  padding: 10px 22px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s;
+/* ================= TAGS ================= */
+.tag{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:6px;
+  font-size:12px;
+  margin-top:10px;
 }
 
-.resume-btn:hover {
-  box-shadow: 0 0 25px #00ffcc;
-  transform: scale(1.05);
+.done{background:#00ff9c;color:black;}
+.progress{background:#ffd600;color:black;}
+.plan{background:#bbb;color:black;}
+
+/* ================= SOFT SKILLS ================= */
+.soft-list{
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:12px;
 }
 
-
-/* ✅ Text shadow reduce (clean look) */
-h1, h2, h3 {
-  text-shadow: 0 0 6px rgba(0,255,200,0.3);
-}
-/* ================= FOOTER PRO STYLE ================= */
-
-.footer {
-  text-align: center;
-  padding: 25px 10px;
-  margin-top: 40px;
-
-  font-size: 14px;
-  letter-spacing: 0.5px;
-
-  color: #b8fff2;
-  opacity: 0.85;
-
-  border-top: 1px solid rgba(0, 255, 200, 0.15);
-
-  transition: all 0.3s ease;
+.soft-list li{
+  padding:12px;
+  border-radius:8px;
+  background:rgba(255,255,255,0.08);
 }
 
-/* Hover glow effect */
-.footer:hover {
-  opacity: 1;
-  text-shadow: 0 0 6px rgba(0, 255, 200, 0.5);
+/* ================= FOOTER ================= */
+.footer{
+  text-align:center;
+  padding:40px 10px;
+  margin-top:60px;
+  opacity:0.8;
 }
 
-/* small developer line */
-.footer .dev {
-  margin-top: 6px;
-  font-size: 13px;
-  opacity: 0.7;
-}
-.footer {
-  text-align: center;
-  opacity: 0.8;
-  font-size: 14px;
-  padding: 20px 0;
-  color: #aaa;
+.brand{
+  color:#00ffd5;
+  font-weight:600;
 }
 
-.footer p {
-  margin: 4px 0;
-}
-.footer {
-  text-align: center;
-  padding: 40px 10px;   /* 👈 height bada karo */
-  margin-top: 40px;
-
-  font-size: 14px;
-  letter-spacing: 0.5px;
-
-  color: #b8fff2;
-
-  background: rgba(0, 255, 200, 0.05); /* 👈 visible area */
-  transition: all 0.3s ease;
-}
-
-.footer:hover {
-  background: rgba(0, 255, 200, 0.12); /* 👈 CLEAR hover */
-  transform: translateY(-4px);
-}
-.footer {
-  text-align: center;
-  padding: 40px 10px;
-  margin-top: 40px;
-
-  font-size: 14px;
-  letter-spacing: 0.5px;
-
-  color: #b8fff2;
-
-  background: rgba(0,255,200,0.05);   /* 👈 visible area */
-  border-top: 1px solid rgba(0,255,200,0.2);
-
-  transition: 0.3s;
-}
-
-.footer:hover {
-  background: rgba(0,255,200,0.12);   /* 👈 THIS animates clearly */
-  box-shadow: 0 0 25px rgba(0,255,200,0.4);
-}
-
-.footer .dev {
-  margin-top: 6px;
-  font-size: 13px;
-  opacity: 0.7;
+/* ================= ANIMATION ================= */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
