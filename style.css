@@ -304,3 +304,40 @@ project-grid{
 
   align-items:start;   /* 🔥 MOST IMPORTANT FIX */
 }
+/* ================= SOFT SKILLS ================= */
+
+.soft-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.soft-item{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: rgba(255,255,255,0.05);
+  padding: 14px 18px;
+
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+
+  transition: 0.3s;
+}
+
+.soft-item:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px #00ffe155;
+}
+
+.soft-item i{
+  font-size: 18px;
+  color: #00ffe1;
+}
+
+.soft-item p{
+  margin: 0;
+  font-size: 14px;
+}
