@@ -297,3 +297,10 @@ ul{
   transform:translateY(-4px);
   box-shadow:0 0 25px rgba(0,255,255,.35);
 }
+project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+
+  align-items:start;   /* 🔥 MOST IMPORTANT FIX */
+}
