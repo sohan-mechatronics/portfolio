@@ -1328,45 +1328,50 @@ hero{
 .card{
   transform: none !important;
 }
-/* ===============================
-   HERO CARD FINAL GLOW (STATIC + HOVER ONLY)
-   =============================== */
+/* =========================
+   ULTRA HERO CARD GLOW
+   ========================= */
 
 .hero-card.card{
   position: relative;
   border-radius: 25px;
   overflow: hidden;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: 0.3s ease;
 
-  /* base soft glow */
-  box-shadow: 0 0 25px rgba(0,255,200,0.25);
+  /* strong base glow */
+  box-shadow:
+    0 0 40px rgba(0,255,200,0.35),
+    0 0 80px rgba(0,255,200,0.25);
 }
 
 
-/* glow border layer */
+/* glowing border layer */
 .hero-card.card::before{
   content: "";
   position: absolute;
-  inset: -3px;
+  inset: -6px;
   border-radius: inherit;
 
-  background: linear-gradient(45deg,#00fff2,#00fae0,#00fff2);
-  filter: blur(30px);
+  background: linear-gradient(45deg,#00fff2,#00ffd5,#00fff2);
+  filter: blur(55px);
 
-  opacity: 0;
-  transition: 0.3s;
+  opacity: 0.6;     /* ALWAYS visible glow */
   z-index: -1;
+  transition: 0.3s;
 }
 
 
-/* ⭐ ONLY glow on hover (NO movement) */
+/* 🔥 SUPER BRIGHT on hover */
 .hero-card.card:hover{
-  transform: none;   /* stop jumping */
+  transform: none;
+
   box-shadow:
-    0 0 35px #00fff2,
-    0 0 80px rgba(0,255,200,0.7);
+    0 0 60px #00fff2,
+    0 0 120px rgba(0,255,200,0.9),
+    0 0 200px rgba(0,255,200,0.6);
 }
 
 .hero-card.card:hover::before{
   opacity: 1;
+  filter: blur(70px);
 }
