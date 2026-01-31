@@ -1351,11 +1351,17 @@ hero{
 
   overflow: hidden;
 
-  transition: box-shadow .3s ease, transform .2s ease;
-
   box-shadow: 0 0 25px rgba(0,255,200,.25);
 }
-
+/* ===== NO CARD MOVEMENT FINAL ===== */
+.card,
+.card:hover,
+.hero-card,
+.hero-card:hover{
+  transform:none !important;
+  translate:none !important;
+  animation:none !important;
+}
 
 /* glow border layer */
 hero-card.card::before{
@@ -1364,7 +1370,7 @@ hero-card.card::before{
   inset:-3px;
   border-radius:inherit;
 
-  background:linear-gradient(45deg,#00fff2,#00fae0,#00fff2);
+  background:radial-gradient(45deg,#00fff2,#00fae0,#00fff2);
   filter:blur(6px);
   opacity:.35;
   transition:opacity .3s ease;
@@ -1463,6 +1469,31 @@ hero-card.card::before{
   box-shadow: 0 0 40px rgba(0,255,255,.35);
 }
 @keyframes gradientMove{
+  0%{ background-position: 0% 50%; }
+  50%{ background-position: 100% 50%; }
+  100%{ background-position: 0% 50%; }
+}
+* /*FULL PAGE ANIMATED BACKGROUND*/ 
+
+body{
+  margin:0;
+
+  background: linear-gradient(
+    135deg,
+    #061a1a,
+    #0b2e2e,
+    #062626,
+    #0f3a3a
+  );
+
+  background-size: 400% 400%;
+
+  animation: pageGradientMove 12s ease infinite;
+}
+
+
+/* animation */
+@keyframes pageGradientMove{
   0%{ background-position: 0% 50%; }
   50%{ background-position: 100% 50%; }
   100%{ background-position: 0% 50%; }
