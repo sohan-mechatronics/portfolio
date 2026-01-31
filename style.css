@@ -33,36 +33,33 @@ section{
 /* =====================================
 💎 PREMIUM CARD (MAIN FIX)
 ===================================== */
-
-.card{
+card{
   width:95%;
   max-width:1350px;
   margin:40px auto;
-
   padding:40px;
 
-  /* auto height only */
   height:auto;
-
-  /* NO flex here → fixes extra space */
   display:block;
 
- background: rgba(255,255,255,.07);
-backdrop-filter: blur(10px) brightness(1.1);
+  background: rgba(255,255,255,.07);
+  backdrop-filter: blur(10px) brightness(1.1);
+
+  border: 1px solid rgba(255,255,255,.08);   /* ⭐ ADD THIS */
 
   border-radius:22px;
 
-  box-shadow:0 0 30px rgba(0,255,255,.15);
   position: relative;
-  z-index: 1;
+  z-index:1;
+
   transition: all .3s ease;
 }
-
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 0 50px rgba(0,255,255,.35);
+.hero-card:hover{
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 25px rgba(0,255,200,.45),
+    0 0 55px rgba(0,255,200,.25);
 }
-
 
 /* =====================================
 🟢 HEADINGS PERFECT TOP + CENTER
@@ -1340,7 +1337,7 @@ hero{
   transform: none !important;
 }
 /* ===== HERO MAIN CARD ===== */
-.hero-card.card{
+.card{
   background: rgba(20,25,30,0.92);
   border-radius: 25px;
   padding: 35px;
@@ -1348,7 +1345,7 @@ hero{
 }
 
 /* ===== CLEAN SOFT GLOW ===== */
-.hero-card.card:hover{
+.card:hover{
   box-shadow:
 0 0 18px rgba(0,255,200,.35),
 0 0 30px rgba(0,255,200,.18);
