@@ -1083,3 +1083,86 @@ card{
 h1,h2,h3{
   text-shadow: 0 0 12px rgba(0,255,200,.4);
 }
+/* =====================================
+   💎 SUPER INTENSE CARD GLOW
+   ===================================== */
+
+.card{
+  position:relative;
+  overflow:hidden;
+  border-radius:25px;
+}
+
+
+/* base glow */
+.card::before{
+  content:"";
+  position:absolute;
+  inset:-4px;
+  border-radius:inherit;
+
+  background: linear-gradient(45deg,#00fff2,#00ffae,#00fff2);
+
+  filter: blur(35px);
+  opacity:.25;
+  z-index:-1;
+}
+
+
+/* 🔥 HOVER BLAST GLOW */
+.card:hover::before{
+  opacity:1;
+  filter: blur(55px);
+}
+
+
+/* extra shadow punch */
+.card:hover{
+  box-shadow:
+    0 0 30px #00fff2,
+    0 0 70px rgba(0,255,200,.7),
+    0 0 120px rgba(0,255,200,.6);
+}
+/* =====================================
+   ✨ FLOATING PARTICLES (CSS ONLY)
+   ===================================== */
+
+.particles{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+}
+
+/* create many circles */
+.particles::before{
+  content:"";
+  position:absolute;
+  width:4px;
+  height:4px;
+  background:#00fff2;
+  border-radius:50%;
+
+  box-shadow:
+    40px 60px #00fff2,
+    120px 20px #00fff2,
+    200px 100px #00fff2,
+    300px 40px #00fff2,
+    380px 120px #00fff2,
+    460px 80px #00fff2,
+    540px 160px #00fff2,
+    620px 60px #00fff2;
+
+  animation: floatParticles 10s linear infinite;
+  opacity:.6;
+}
+
+@keyframes floatParticles{
+  from{
+    transform: translateY(120%);
+  }
+  to{
+    transform: translateY(-120%);
+  }
+}
