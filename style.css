@@ -1384,3 +1384,43 @@ hero{
 .hero-card.card:hover::before{
   opacity: 1;
 }
+/* ================================
+   🔥 FINAL HERO CARD FIX (NO DELETE)
+   paste at VERY END
+================================ */
+
+/* hero ko normal block bana do */
+.hero{
+  display:block !important;
+  text-align:center;
+}
+
+
+/* sab content ek hi card me force karo */
+.hero > *{
+  width:100%;
+}
+
+
+/* main card perfect center */
+.hero .card{
+  max-width:900px !important;
+  margin:60px auto !important;
+}
+
+
+/* buttons always inside card */
+.contact-row,
+.buttons{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  justify-content:center !important;
+  gap:12px;
+  width:100%;
+}
+
+
+/* prevent overflow */
+.card{
+  overflow:hidden !important;
+}
