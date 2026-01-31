@@ -1311,3 +1311,9 @@ hero{
     opacity:0;
   }
 }
+/* ===== FORCE STATIC CARDS ===== */
+.card,
+.hero-card{
+  transform: none !important;
+  animation: none !important;
+}
