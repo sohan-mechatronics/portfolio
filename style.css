@@ -1317,3 +1317,11 @@ hero{
   transform: none !important;
   animation: none !important;
 }
+/* ===== FINAL FIX : CARDS STATIC ===== */
+.card,
+.card:hover,
+.hero-card,
+.hero-card:hover{
+  transform: none !important;
+  translate: none !important;
+}
