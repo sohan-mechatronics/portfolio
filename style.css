@@ -814,3 +814,24 @@ html{
   from{transform:translateY(100vh);}
   to{transform:translateY(-10vh);}
 }
+/* ===== Training Section Center Alignment Fix ===== */
+
+/* heading center */
+.card h2{
+  text-align:center;
+}
+
+/* pura box center */
+.training-box{
+  max-width:900px;
+  margin:0 auto;
+  text-align:center;
+}
+
+/* bullets center looking */
+.points{
+  list-style-position:inside;
+  padding:0;
+  text-align:left;   /* readable look */
+  display:inline-block;
+}
