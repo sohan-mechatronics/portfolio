@@ -1328,3 +1328,45 @@ hero{
 .card{
   transform: none !important;
 }
+/* ===============================
+   HERO CARD FINAL GLOW (STATIC + HOVER ONLY)
+   =============================== */
+
+.hero-card.card{
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+
+  /* base soft glow */
+  box-shadow: 0 0 25px rgba(0,255,200,0.25);
+}
+
+
+/* glow border layer */
+.hero-card.card::before{
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+
+  background: linear-gradient(45deg,#00fff2,#00fae0,#00fff2);
+  filter: blur(30px);
+
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+
+/* ⭐ ONLY glow on hover (NO movement) */
+.hero-card.card:hover{
+  transform: none;   /* stop jumping */
+  box-shadow:
+    0 0 35px #00fff2,
+    0 0 80px rgba(0,255,200,0.7);
+}
+
+.hero-card.card:hover::before{
+  opacity: 1;
+}
