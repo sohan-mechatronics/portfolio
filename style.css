@@ -858,3 +858,228 @@ html{
   display:inline-block;
   margin-top:15px;
 }
+/* ===== TRAINING SECTION PERFECT CENTER FIX ===== */
+
+/* pura card ko center karo */
+.card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+/* andar ka box limited width */
+.training-box{
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+}
+
+/* bullets readable */
+.points{
+  text-align:left;
+  display:inline-block;
+  margin-top:15px;
+}
+.card{
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at var(--x,50%) var(--y,50%),
+    rgba(0,255,200,0.35),
+    transparent 60%
+  );
+
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.card:hover::before{
+  opacity: 1;
+}
+card{
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  transform-style: preserve-3d;
+}
+
+.card:hover{
+  box-shadow: 0 25px 60px rgba(0,255,200,0.35);
+}
+.btn{
+  display:inline-block;
+  transition: transform 0.2s ease;
+}
+/* ======================================================
+   🔥 ULTIMATE PORTFOLIO PREMIUM EFFECT PACK (CSS ONLY)
+   Paste at LAST of style.css
+   ====================================================== */
+
+
+/* ===== GLOBAL SMOOTHNESS ===== */
+*{
+  transition: all .3s ease;
+}
+
+
+/* ======================================================
+   1️⃣ PREMIUM CARD BASE STYLE
+   ====================================================== */
+
+.card{
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+
+  background: rgba(20,25,30,.75);
+  backdrop-filter: blur(12px);
+
+  transform-style: preserve-3d;
+  perspective: 1000px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+
+
+/* ======================================================
+   2️⃣ GLOW EFFECT (hover bright neon)
+   ====================================================== */
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:-3px;
+  border-radius:25px;
+
+  background: linear-gradient(
+      45deg,
+      #00fff2,
+      #00ff9d,
+      #00fff2
+  );
+
+  filter: blur(30px);
+  opacity:0;
+  z-index:-1;
+  transition:.4s;
+}
+
+.card:hover::before{
+  opacity:1;
+}
+
+
+/* ======================================================
+   3️⃣ 3D TILT + FLOAT
+   ====================================================== */
+
+.card:hover{
+  transform:
+      translateY(-10px)
+      rotateX(6deg)
+      rotateY(-6deg)
+      scale(1.03);
+
+  box-shadow:
+      0 30px 80px rgba(0,255,200,.35);
+}
+
+
+/* ======================================================
+   4️⃣ MAGNETIC BUTTONS
+   ====================================================== */
+
+.btn{
+  display:inline-block;
+  padding:10px 22px;
+  border-radius:12px;
+
+  background:rgba(0,255,200,.08);
+  border:1px solid rgba(0,255,200,.4);
+
+  cursor:pointer;
+}
+
+.btn:hover{
+  transform: translateY(-4px) scale(1.08);
+  background:#00ffe0;
+  color:#000;
+
+  box-shadow:
+      0 0 25px #00ffe0,
+      0 0 60px #00ffe0;
+}
+
+
+/* ======================================================
+   5️⃣ SMOOTH FADE REVEAL (page load animation)
+   ====================================================== */
+
+.reveal{
+  opacity:0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+/* ======================================================
+   6️⃣ TYPING INTRO EFFECT
+   ====================================================== */
+
+.typing{
+  width:0;
+  white-space:nowrap;
+  overflow:hidden;
+
+  border-right:3px solid #00fff2;
+
+  animation:
+    typing 4s steps(45,end) forwards,
+    blink .7s infinite;
+}
+
+@keyframes typing{
+  to{ width:100%; }
+}
+
+@keyframes blink{
+  50%{ border-color:transparent; }
+}
+
+
+/* ======================================================
+   7️⃣ EXTRA FLOATING ANIMATION (subtle life)
+   ====================================================== */
+
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+  100%{transform:translateY(0)}
+}
+
+.card{
+  animation: float 6s ease-in-out infinite;
+}
+
+
+/* ======================================================
+   8️⃣ SOFT TEXT GLOW
+   ====================================================== */
+
+h1,h2,h3{
+  text-shadow: 0 0 12px rgba(0,255,200,.4);
+}
