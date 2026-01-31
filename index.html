@@ -452,8 +452,7 @@
   </script>
   <script>
 
-
-/* ===== Loader Hide ===== */
+/* ===== Loader ===== */
 window.addEventListener("load",()=>{
   document.getElementById("loader").style.display="none";
 });
@@ -468,18 +467,17 @@ document.addEventListener("mousemove",(e)=>{
 });
 
 
-/* ===== Parallax Effect ===== */
+/* ===== Parallax ===== */
 document.addEventListener("mousemove",(e)=>{
   const x=(window.innerWidth/2-e.clientX)/40;
   const y=(window.innerHeight/2-e.clientY)/40;
 
   document.querySelectorAll(".card").forEach(card=>{
-    card.style.transform=translate(${x}px,${y}px);
+    card.style.transform = 'translate(${x}px, ${y}px)'; 
   });
 });
 
-
-/* ===== Particles Generator ===== */
+/* ===== Particles ===== */
 const particles=document.getElementById("particles");
 
 for(let i=0;i<70;i++){
@@ -491,8 +489,8 @@ for(let i=0;i<70;i++){
   p.style.animationDelay=Math.random()*5+"s";
 
   particles.appendChild(p);
-}
 
+}
 
 </script>
 
