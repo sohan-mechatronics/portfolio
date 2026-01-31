@@ -1,6 +1,6 @@
-/* ===============================
-   GLOBAL RESET
-=============================== */
+/* =====================================
+🌑 RESET
+===================================== */
 
 *{
   margin:0;
@@ -9,72 +9,135 @@
   font-family:'Poppins',sans-serif;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-  background:#0b1116;
+  background:#0a0f14;
   color:#fff;
-  overflow-x:hidden;
+  line-height:1.6;
 }
 
 
-/* ===============================
-   HERO
-=============================== */
+/* =====================================
+🌟 UNIVERSAL SECTION
+===================================== */
+
+section{
+  width:100%;
+  padding:60px 20px;
+}
+
+
+/* =====================================
+💎 PREMIUM CARD (MAIN FIX)
+===================================== */
+
+.card{
+  width:95%;
+  max-width:1350px;
+  margin:40px auto;
+
+  padding:40px;
+
+  /* auto height only */
+  height:auto;
+
+  /* NO flex here → fixes extra space */
+  display:block;
+
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(14px);
+
+  border-radius:22px;
+
+  box-shadow:0 0 30px rgba(0,255,255,.15);
+
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 50px rgba(0,255,255,.35);
+}
+
+
+/* =====================================
+🟢 HEADINGS PERFECT TOP + CENTER
+===================================== */
+
+.card h2{
+  text-align:center;
+  margin-bottom:30px;
+  font-size:26px;
+}
+
+
+/* =====================================
+🔥 HERO SECTION
+===================================== */
 
 .hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
   text-align:center;
-  padding:80px 20px;
+  padding:60px 20px;
 }
 
 .profile-pic{
-  width:150px;
-  height:150px;
+  width:160px;
+  height:160px;
   border-radius:50%;
   border:3px solid #00ffe7;
-  box-shadow:0 0 30px #00ffe7;
+  box-shadow:0 0 25px #00ffe7;
   margin-bottom:20px;
 }
 
 .name{
-  font-size:40px;
+  font-size:42px;
   font-weight:700;
 }
 
 .tagline{
   color:#00ffe7;
-  margin-top:8px;
+  margin-bottom:25px;
 }
 
 
-/* ===============================
-   HERO CARD
-=============================== */
+/* =====================================
+🔥 HERO CARD
+===================================== */
 
 .hero-card{
   width:95%;
-  max-width:1200px;
-  margin:40px auto;
-
+  max-width:900px;
   padding:35px;
 
   background:rgba(255,255,255,.05);
-  backdrop-filter:blur(14px);
+  backdrop-filter:blur(12px);
 
   border-radius:20px;
 
-  box-shadow:0 0 35px rgba(0,255,255,.2);
+  box-shadow:0 0 25px rgba(0,255,255,.2);
+
+  text-align:center;
 }
 
 
-/* ===============================
-   BUTTONS
-=============================== */
+/* =====================================
+🟢 BUTTONS
+===================================== */
 
 .contact-row,
 .buttons{
   display:flex;
-  justify-content:center;
   flex-wrap:wrap;
   gap:12px;
+  justify-content:center;
   margin-top:15px;
 }
 
@@ -90,124 +153,101 @@ body{
 
 .btn{
   background:#00ffe7;
-  color:#000;
+  color:#001b20;
 }
 
-.btn-outline{
-  border:1px solid #00ffe7;
-  color:#00ffe7;
-}
-
+.btn-outline,
 .contact-btn{
-  background:rgba(255,255,255,.07);
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  border:1px solid rgba(0,255,255,.4);
+}
+
+.btn:hover,
+.btn-outline:hover,
+.contact-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 20px #00ffe7;
 }
 
 
-/* ===============================
-   ⭐ MAIN CARD (IMPORTANT FIX)
-=============================== */
-
-.card{
-
-  width:95%;
-  max-width:1500px;
-
-  margin:60px auto;
-
-  padding:35px;
-
-  /* ⭐ height auto only */
-  height:auto;
-
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(14px);
-
-  border-radius:18px;
-
-  box-shadow:0 0 25px rgba(0,255,255,.15);
-
-  /* ⭐ REMOVE flex (THIS FIXES EXTRA SPACE) */
-  text-align:center;
-}
-
-
-/* ===============================
-   HEADINGS ALWAYS TOP
-=============================== */
-
-.card h2{
-  margin-bottom:25px;
-  font-size:26px;
-}
-
-
-/* ===============================
-   GRID LAYOUT (AUTO HEIGHT)
-=============================== */
+/* =====================================
+🌟 ALL GRIDS (perfect alignment)
+===================================== */
 
 .edu-grid,
+.ach-grid,
+.foundation-grid,
 .skill-grid,
 .project-grid,
-.foundation-grid,
-.ach-grid,
 .soft-grid{
 
   display:grid;
-
   gap:22px;
 
   grid-template-columns:
   repeat(auto-fit,minmax(260px,1fr));
 
-  align-items:start;   /* ⭐ prevents stretch */
+  width:100%;
 }
 
 
-/* ===============================
-   SMALL CARDS
-=============================== */
+/* =====================================
+🟢 SMALL CARDS
+(no fixed height → auto content only)
+===================================== */
 
 .edu-item,
-.project-card,
-.skill-card,
-.foundation-item,
 .ach-item,
+.foundation-item,
+.skill-card,
+.project-card,
 .soft-item{
-
-  padding:18px;
 
   background:rgba(255,255,255,.06);
 
+  padding:18px;
+
   border-radius:14px;
 
-  transition:.3s;
+  height:auto;
 
-  height:auto; /* ⭐ content only */
+  transition:.3s;
 }
 
 .edu-item:hover,
-.project-card:hover,
-.skill-card:hover,
-.foundation-item:hover,
 .ach-item:hover,
+.foundation-item:hover,
+.skill-card:hover,
+.project-card:hover,
 .soft-item:hover{
-  transform:translateY(-5px);
-  box-shadow:0 0 25px rgba(0,255,255,.4);
+  transform:translateY(-4px);
+  box-shadow:0 0 20px rgba(0,255,255,.3);
 }
 
 
-/* ===============================
-   FOOTER
-=============================== */
+/* =====================================
+🟢 LIST CLEAN
+===================================== */
+
+ul{
+  margin-top:10px;
+  padding-left:18px;
+}
+
+
+/* =====================================
+🔥 FOOTER
+===================================== */
 
 .footer{
   text-align:center;
 }
 
 
-/* ===============================
-   MOBILE
-=============================== */
+/* =====================================
+📱 MOBILE
+===================================== */
 
 @media(max-width:600px){
 
@@ -216,7 +256,7 @@ body{
   }
 
   .card{
-    padding:22px;
+    padding:25px;
   }
 
 }
