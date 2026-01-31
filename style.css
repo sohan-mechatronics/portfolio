@@ -1451,3 +1451,26 @@ hero{
   color:#ffffff;
   transform:scale(1.05); /* small pop effect */
 }
+/* ===== BUTTON GLOW HOVER ===== */
+.card a,
+.card button{
+  transition: all .3s ease;
+  border:1px solid rgba(0,255,255,.4);
+}
+
+.card a:hover,
+.card button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px #00ffe7, 0 0 30px rgba(0,255,255,.6);
+  background: rgba(0,255,255,.12);
+  color:#fff;
+}
+/* ===== CARD SCALE HOVER ===== */
+.card{
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(0,255,255,.35);
+}
