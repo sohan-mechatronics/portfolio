@@ -86,8 +86,8 @@ section{
 
   justify-content:flex-start;
 
-  gap:10px;
-  padding-top:15px;
+  gap:6px;          /* 🔥 tight spacing */
+  padding-top:8px; /* 🔥 card upar aayega */
 
   text-align:center;
 }
