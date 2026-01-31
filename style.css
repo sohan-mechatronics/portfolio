@@ -1436,14 +1436,17 @@ hero{
 .card{
   overflow:hidden !important;
 }
-/* ===== ALL BUTTONS SAME HOVER STYLE ===== */
+/* ===== ALL BUTTONS SAME HOVER ===== */
+
 .card a,
 .card button{
   color:#00ffe7;
-  transition:0.3s;
+  text-decoration:none;
+  transition:0.25s ease;
 }
 
 .card a:hover,
 .card button:hover{
-  color:#ffffff;   /* white text */
+  color:#ffffff;
+  transform:scale(1.05); /* small pop effect */
 }
