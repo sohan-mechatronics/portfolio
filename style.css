@@ -77,23 +77,33 @@ section{
 /* =====================================
 🔥 HERO SECTION
 ===================================== */
-
 .hero{
   min-height:100vh;
-  text-align:center;
-  padding:80px 20px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  justify-content:flex-start;   /* card upar aayega */
+  gap:20px;                    /* photo + card spacing */
 
   text-align:center;
-  padding:60px 20px;
+  padding-top:40px;
 }
 
 .profile-pic{
   width:160px;
   height:160px;
+
   border-radius:50%;
+
+  object-fit:cover;   /* ⭐ photo stretch fix */
+  flex-shrink:0;      /* ⭐ flex compression stop */
+
   border:3px solid #00ffe7;
   box-shadow:0 0 25px #00ffe7;
-  margin-bottom:20px;
+
+  margin-bottom:12px; /* ⭐ gap thoda kam */
 }
 
 .name{
