@@ -1243,3 +1243,44 @@ hero{
   from{transform:translateY(0);}
   to{transform:translateY(-120px);}
 }
+.hero{
+  position:relative;
+  overflow:hidden;
+}
+
+/* particles container */
+.particles{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+}
+
+/* dots */
+.particles::before{
+  content:"";
+  position:absolute;
+  width:200%;
+  height:200%;
+
+  background-image:
+    radial-gradient(circle,#00ffe7 2px,transparent 2px);
+
+  background-size:50px 50px;
+
+  opacity:.6;
+
+  animation: floatDots 10s linear infinite;
+}
+
+/* animation */
+@keyframes floatDots{
+  from{ transform: translateY(0); }
+  to{ transform: translateY(-120px); }
+}
+
+/* hero content above particles */
+.hero > *{
+  position:relative;
+  z-index:1;
+}
