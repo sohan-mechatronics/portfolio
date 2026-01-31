@@ -569,3 +569,186 @@ footer{
     font-size:20px;
   }
 }
+/* =================================
+   🔥 NEXT LEVEL EFFECTS PACK
+================================= */
+
+
+/* ===== Cursor Glow ===== */
+.cursor-glow{
+  position:fixed;
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  background:cyan;
+  pointer-events:none;
+  mix-blend-mode:screen;
+  box-shadow:0 0 25px cyan,0 0 60px cyan;
+  transform:translate(-50%,-50%);
+  z-index:9999;
+}
+
+
+/* ===== Page Loader ===== */
+#loader{
+  position:fixed;
+  inset:0;
+  background:#05080c;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:10000;
+}
+
+.loader-circle{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  border:6px solid rgba(0,255,255,.2);
+  border-top:6px solid cyan;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  100%{ transform:rotate(360deg); }
+}
+
+
+/* ===== Parallax Depth ===== */
+.parallax{
+  transform:translateZ(0);
+  transition:transform .2s linear;
+}
+
+
+/* ===== Animated Background Particles ===== */
+#particles{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  overflow:hidden;
+}
+
+.particle{
+  position:absolute;
+  width:4px;
+  height:4px;
+  background:rgba(0,255,255,.5);
+  border-radius:50%;
+  animation:float 8s linear infinite;
+}
+
+@keyframes float{
+  from{
+    transform:translateY(100vh);
+    opacity:0;
+  }
+  30%{opacity:1;}
+  to{
+    transform:translateY(-10vh);
+    opacity:0;
+  }
+}
+/* =================================================
+   🔥 NEXT LEVEL EFFECTS CSS
+   Loader + Cursor + Particles + Parallax polish
+================================================= */
+
+
+/* ===== Loader ===== */
+#loader{
+  position:fixed;
+  inset:0;
+  background:#0b0f14;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.loader-circle{
+  width:60px;
+  height:60px;
+  border:5px solid #1e293b;
+  border-top:5px solid #00ffe0;
+  border-radius:50%;
+  animation:spin 0.8s linear infinite;
+}
+
+@keyframes spin{
+  to{ transform:rotate(360deg); }
+}
+
+
+
+/* ===== Cursor Glow ===== */
+.cursor-glow{
+  position:fixed;
+  width:35px;
+  height:35px;
+  background:#00ffe0;
+  border-radius:50%;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  filter:blur(15px);
+  opacity:.45;
+  z-index:9998;
+}
+
+
+
+/* ===== Particles Background ===== */
+#particles{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  overflow:hidden;
+}
+
+.particle{
+  position:absolute;
+  width:4px;
+  height:4px;
+  background:#00ffe0;
+  border-radius:50%;
+  opacity:.4;
+  animation:float linear infinite;
+}
+
+@keyframes float{
+  from{ transform:translateY(100vh); }
+  to{ transform:translateY(-10vh); }
+}
+
+
+
+/* ===== Smooth Card Animation (Parallax friendly) ===== */
+.card{
+  transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover{
+  box-shadow:0 0 25px rgba(0,255,224,0.25);
+}
+
+
+
+/* ===== Scroll Smooth ===== */
+html{
+  scroll-behavior:smooth;
+}
+
+
+
+/* ===== Mobile performance ===== */
+@media(max-width:768px){
+
+  .cursor-glow{
+    display:none;   /* mobile me laggy lagta hai */
+  }
+
+  #particles{
+    opacity:.25;
+  }
+
+}

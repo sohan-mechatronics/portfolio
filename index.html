@@ -25,6 +25,16 @@
 </head>
 
 <body>
+  <!-- Page Loader -->
+<div id="loader">
+  <div class="loader-circle"></div>
+</div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow"></div>
+
+<!-- Particles -->
+<div id="particles"></div>
   <!-- ================= HERO / HEADER ================= -->
   <header class="hero">
 
@@ -440,6 +450,51 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script>
+
+
+/* ===== Loader Hide ===== */
+window.addEventListener("load",()=>{
+  document.getElementById("loader").style.display="none";
+});
+
+
+/* ===== Cursor Glow ===== */
+const cursor=document.querySelector(".cursor-glow");
+
+document.addEventListener("mousemove",(e)=>{
+  cursor.style.left=e.clientX+"px";
+  cursor.style.top=e.clientY+"px";
+});
+
+
+/* ===== Parallax Effect ===== */
+document.addEventListener("mousemove",(e)=>{
+  const x=(window.innerWidth/2-e.clientX)/40;
+  const y=(window.innerHeight/2-e.clientY)/40;
+
+  document.querySelectorAll(".card").forEach(card=>{
+    card.style.transform=translate(${x}px,${y}px);
+  });
+});
+
+
+/* ===== Particles Generator ===== */
+const particles=document.getElementById("particles");
+
+for(let i=0;i<70;i++){
+  let p=document.createElement("div");
+  p.className="particle";
+
+  p.style.left=Math.random()*100+"vw";
+  p.style.animationDuration=(5+Math.random()*6)+"s";
+  p.style.animationDelay=Math.random()*5+"s";
+
+  particles.appendChild(p);
+}
+
+
+</script>
 
 
 </body>
