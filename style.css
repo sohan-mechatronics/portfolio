@@ -1180,3 +1180,66 @@ hero{
   position:relative;
   z-index:1;
 }
+/* ================= PARTICLES BACKGROUND ================= */
+
+.particles{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  z-index:0;
+  pointer-events:none;
+}
+
+/* small glowing dots */
+.particles::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+
+  background-image:
+    radial-gradient(circle,#00ffe7 2px,transparent 2px);
+
+  background-size:60px 60px;
+
+  opacity:.35;
+
+  animation:particlesMove 12s linear infinite;
+}
+
+/* moving animation */
+@keyframes particlesMove{
+  from{
+    transform:translateY(0);
+  }
+  to{
+    transform:translateY(-120px);
+  }
+}
+.hero{
+  position:relative;
+}
+
+.particles{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  z-index:0;
+  pointer-events:none;
+}
+
+.particles::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-image: radial-gradient(circle,#00ffe7 2px,transparent 2px);
+  background-size:60px 60px;
+  opacity:.5;
+  animation:particlesMove 12s linear infinite;
+}
+
+@keyframes particlesMove{
+  from{transform:translateY(0);}
+  to{transform:translateY(-120px);}
+}
