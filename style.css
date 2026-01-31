@@ -1328,44 +1328,18 @@ hero{
 .card{
   transform: none !important;
 }
-/* ===== HERO CARD CLEAN GLOW (PRO LEVEL) ===== */
-
+/* ===== HERO MAIN CARD ===== */
 .hero-card.card{
-  position: relative;
+  background: rgba(20,25,30,0.85);
   border-radius: 25px;
-  overflow: hidden;
+  padding: 35px;
   transition: 0.3s ease;
-
-  /* soft base glow */
-  box-shadow: 0 0 25px rgba(0,255,200,0.25);
 }
 
-
-/* glow layer */
-.hero-card.card::before{
-  content: "";
-  position: absolute;
-  inset: -3px;
-  border-radius: inherit;
-
-  background: linear-gradient(45deg,#00fff2,#00ffd5,#00fff2);
-
-  filter: blur(25px);   /* small blur */
-  opacity: 0.35;        /* low brightness */
-
-  z-index: -1;
-  transition: 0.3s;
-}
-
-
-/* hover glow (strong but controlled) */
+/* ===== CLEAN SOFT GLOW ===== */
 .hero-card.card:hover{
   box-shadow:
-    0 0 35px rgba(0,255,200,0.5),
-    0 0 70px rgba(0,255,200,0.35);
-}
-
-.hero-card.card:hover::before{
-  opacity: 0.7;
-  filter: blur(35px);
+    0 0 25px rgba(0,255,200,.5),
+    0 0 60px rgba(0,255,200,.35),
+    0 0 120px rgba(0,255,200,.25);
 }
