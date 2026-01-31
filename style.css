@@ -1,1150 +1,5 @@
-/* ================= GLOBAL ================= */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-
-body{
-background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  color:white;
-  scroll-behavior:smooth;
-}
-
-section{
-  width:100%;
-}
-
-.card{
-  width:100%;
-  max-width:1400px;
-  margin:40px auto;   /* keep ONLY this */
-  padding:60px 100px;
-  border-radius:20px;
-}
-
-
-
-/* ================= HERO ================= */
-.hero{
-  text-align:center;
-  padding:100px 20px;
-  position:relative;
-}
-
-/* glow background */
-.hero-bg{
-  position:absolute;
-  inset:0;
-  background: radial-gradient(circle at 30% 30%,#00ffe0aa,transparent),
-              radial-gradient(circle at 70% 60%,#00aaffaa,transparent);
-  filter: blur(120px);
-  z-index:-1;
-}
-
-.profile-pic{
-  width:170px;
-  height:170px;
-  border-radius:50%;
-  object-fit:cover;
-  border:4px solid #00e5ff;
-  box-shadow:0 0 40px #00e5ff;
-  transition:0.4s;
-}
-
-.profile-pic:hover{
-  transform:scale(1.07);
-}
-
-.name{
-  font-size:42px;
-  font-weight:700;
-  margin-top:20px;
-}
-
-.tagline{
-  font-size:22px;
-  color:#00ffd5;
-  margin-top:10px;
-}
-
-.hero-sub{
-  opacity:0.8;
-  margin:10px 0 25px;
-}
-
-/* ================= BUTTONS ================= */
-.buttons{
-  margin-top:20px;
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
-}
-
-.btn,.btn-outline{
-  padding:10px 18px;
-  border-radius:8px;
-  text-decoration:none;
-  font-size:14px;
-  transition:0.3s;
-}
-
-.btn{
-  background:#00e5ff;
-  color:black;
-  font-weight:600;
-}
-
-.btn:hover{
-  transform:translateY(-4px);
-  box-shadow:0 10px 25px #00e5ff;
-}
-
-.btn-outline{
-  border:1px solid #00e5ff;
-  color:#00e5ff;
-}
-
-.btn-outline:hover{
-  background:#00e5ff;
-  color:black;
-}
-
-/* ================= CARDS ================= */
-.card{
-  margin:60px auto;
-  padding:40px;
-  width:90%;
-  max-width:1100px;
-
-  backdrop-filter:blur(18px);
-  background:rgba(255,255,255,0.06);
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,0.1);
-
-  transition:0.4s;
-  animation:fadeUp 0.9s ease;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.5);
-}
-
-h2{
-  margin-bottom:25px;
-  font-size:26px;
-  color:#00ffd5;
-}
-
-/* ================= GRID ================= */
-.skill-grid,
-.edu-grid,
-.project-grid,
-.foundation-grid,
-.ach-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:18px;
-}
-
-/* ================= SMALL CARDS ================= */
-.skill-card,
-.project-card,
-.edu-item,
-.foundation-item,
-.ach-item{
-  padding:18px;
-  border-radius:12px;
-  background:rgba(255,255,255,0.08);
-  transition:0.3s;
-}
-
-.skill-card:hover,
-.project-card:hover,
-.edu-item:hover,
-.foundation-item:hover,
-.ach-item:hover{
-  transform:translateY(-6px);
-  background:rgba(0,255,255,0.15);
-}
-
-/* ================= TAGS ================= */
-.tag{
-  display:inline-block;
-  padding:5px 10px;
-  border-radius:6px;
-  font-size:12px;
-  margin-top:10px;
-}
-
-.done{background:#00ff9c;color:black;}
-.progress{background:#ffd600;color:black;}
-.plan{background:#bbb;color:black;}
-
-/* ================= SOFT SKILLS ================= */
-.soft-list{
-  list-style:none;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:12px;
-}
-
-.soft-list li{
-  padding:12px;
-  border-radius:8px;
-  background:rgba(255,255,255,0.08);
-}
-
-/* ================= FOOTER ================= */
-.footer{
-  text-align:center;
-  padding:40px 10px;
-  margin-top:60px;
-  opacity:0.8;
-}
-
-.brand{
-  color:#00ffd5;
-  font-weight:600;
-}
-
-/* ================= ANIMATION ================= */
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(30px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-.soft-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
-  margin-top:25px;
-}
-
-.soft-item{
-  background:rgba(255,255,255,0.08);
-  border-radius:14px;
-  padding:18px;
-  display:flex;
-  align-items:center;
-  gap:12px;
-  transition:0.3s;
-}
-
-.soft-item:hover{
-  transform:translateY(-6px);
-  box-shadow:0 10px 25px rgba(0,229,255,0.3);
-}
-
-.soft-item i{
-  color:#00e5ff;
-  font-size:20px;
-}
-/* ================= HERO CLEAN SPACING ================= */
-
-.hero{
-  min-height:100vh;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-
-  padding:80px 20px;
-  gap:22px;          /* ⭐ magic spacing */
-}
-
-
-/* profile image */
-.profile-pic{
-  width:170px;
-  height:170px;
-  border-radius:50%;
-  object-fit:cover;
-
-  margin-bottom:10px;
-
-  box-shadow:0 0 25px rgba(0,229,255,0.45);
-}
-
-
-/* name */
-.name{
-  font-size:48px;
-  font-weight:700;
-  letter-spacing:1.5px;
-  margin:0;
-}
-
-
-/* typing role */
-.tagline{
-  font-size:22px;
-  opacity:0.9;
-  margin:8px 0;
-}
-
-
-/* subtitle */
-.hero-sub{
-  font-size:18px;
-  opacity:0.75;
-  margin-bottom:18px;
-}
-
-
-/* contact row */
-.contact-row{
-  display:flex;
-  gap:28px;          /* ⭐ space between links */
-  margin-top:8px;
-  margin-bottom:10px;
-}
-
-.contact-row a{
-  text-decoration:none;
-  font-weight:500;
-  opacity:0.9;
-}
-
-
-/* buttons */
-.buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:18px;          /* ⭐ space between buttons */
-  margin-top:18px;
-}
-/* ===== Card Base ===== */
-.card{
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-
-  border-radius:18px;
-  padding:30px;
-
-  transition: all 0.35s ease;   /* smooth animation */
-}
-
-
-/* ⭐ Hover Effect */
-.card:hover{
-  transform: translateY(-8px);  /* upar float */
-
-  box-shadow:
-    0 15px 35px rgba(0,0,0,0.35),
-    0 0 25px rgba(0,229,255,0.45);  /* glow */
-
-  cursor:pointer;
-}
-.hero-sub{
-    letter-spacing: 1px;
-    font-weight: 500;
-    opacity: 0.9;
-}
-/* ===== Soft Skills Grid ===== */
-
-.soft-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-    margin-top: 25px;
-}
-
-/* card style */
-.soft-item{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    padding: 18px 22px;
-    border-radius: 14px;
-
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-/* icon */
-.soft-item i{
-    font-size: 20px;
-    color: #00ffe7;
-}
-
-/* hover glow */
-.soft-item:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 0 25px rgba(0,255,231,0.5);
-    background: rgba(255,255,255,0.15);
-}
-/* ===== Contact Row ===== */
-
-.contact-row{
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    margin-top: 22px;
-    flex-wrap: wrap;
-}
-
-.contact-btn{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    padding: 10px 18px;
-    border-radius: 30px;
-
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(8px);
-
-    transition: 0.3s ease;
-}
-
-/* hover glow */
-.contact-btn:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 0 18px #00ffe7;
-    background: rgba(255,255,255,0.18);
-
-padding:25px;
-  border-radius:20px;
-
-  text-align:center;
-
-  box-shadow:0 0 25px rgba(0,255,231,0.15);
-
-  transition:0.35s;
-}
-
-.hero-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 0 55px rgba(0,255,231,0.55);
-}
-
-
-/* ===== MAIN CARD ===== */
-
-.main-card{
-  padding:40px 20px;
-}
-
-.profile-pic{
-  width:120px;
-  border-radius:50%;
-  margin-bottom:15px;
-}
-
-
-/* ===== CONTACT LINKS ===== */
-
-.contact-card{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-.contact-card a{
-  color:white;
-  text-decoration:none;
-}
-
-
-/* ===== ACTION BUTTONS ===== */
-
-.action-card{
-  display:flex;
-  gap:15px;
-  flex-wrap:wrap;
-  justify-content:center;
-}
-/* ================= HERO ================= */
-
-.hero{
-  text-align:center;
-  padding:90px 20px;
-  position:relative;
-}
-
-/* single glass card */
-.hero-card{
-  margin-top:35px;
-  padding:30px 25px;
-  max-width:750px;
-  margin-left:auto;
-  margin-right:auto;
-
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(14px);
-
-  border-radius:18px;
-  box-shadow:0 8px 30px rgba(0,0,0,0.25);
-
-  transition:0.3s;
-}
-
-.hero-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 12px 40px rgba(0,0,0,0.35);
-}
-
-
-/* skills text */
-.hero-sub{
-  margin-bottom:20px;
-  font-size:17px;
-  font-weight:500;
-}
-
-
-/* contact row */
-.contact-row{
-  display:flex;
-  justify-content:center;
-  gap:25px;
-  flex-wrap:wrap;
-  margin-bottom:22px;
-}
-
-.contact-btn{
-  color:white;
-  text-decoration:none;
-  padding:8px 14px;
-  border-radius:8px;
-  transition:0.25s;
-}
-
-.contact-btn:hover{
-  background:rgba(255,255,255,0.15);
-}
-
-
-/* buttons */
-.buttons{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
-}
-/* HERO */
-.hero{
-  text-align:center;
-  padding:120px 20px 80px;
-  position:relative;
-}
-
-
-/* PHOTO */
-.profile-pic{
-  width:150px;
-  height:150px;
-  border-radius:50%;
-  object-fit:cover;
-  margin-bottom:18px;
-  box-shadow:0 8px 25px rgba(0,0,0,0.35);
-}
-
-
-/* NAME */
-.name{
-  font-size:48px;
-  margin-bottom:10px;
-}
-
-
-/* GLASS CARD */
-.hero-card{
-  margin:25px auto 0;
-  padding:30px 25px;
-  max-width:720px;
-
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(14px);
-
-  border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.25);
-
-  transition:0.3s;
-}
-
-.hero-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 15px 40px rgba(0,0,0,0.35);
-}
-
-
-/* SKILL LINE */
-.hero-sub{
-  font-weight:600;
-  margin-bottom:18px;
-}
-
-
-/* CONTACT */
-.contact-row{
-  display:flex;
-  justify-content:center;
-  gap:18px;
-  flex-wrap:wrap;
-  margin-bottom:20px;
-}
-
-.contact-btn{
-  background:rgba(255,255,255,0.12);
-  padding:8px 14px;
-  border-radius:8px;
-  text-decoration:none;
-  color:white;
-  transition:0.3s;
-}
-
-.contact-btn:hover{
-  background:rgba(255,255,255,0.25);
-}
-
-
-/* BUTTONS */
-.buttons{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  background:#00e5ff;
-  color:black;
-  padding:9px 18px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:600;
-}
-
-.btn-outline{
-  border:1px solid #00e5ff;
-  color:#00e5ff;
-  padding:9px 18px;
-  border-radius:8px;
-  text-decoration:none;
-}
-/* ============================= */
-/* 🔥 HERO PREMIUM ANIMATIONS    */
-/* ============================= */
-
-
-/* Fade in whole hero */
-.hero{
-  animation: fadeHero 1.2s ease forwards;
-  opacity:0;
-}
-
-@keyframes fadeHero{
-  to{opacity:1;}
-}
-
-
-/* ============================= */
-/* Glow animated name            */
-/* ============================= */
-
-.name{
-  background:linear-gradient(90deg,#ffffff,#00e5ff,#ffffff);
-  background-size:200% auto;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-
-  animation: glowText 4s linear infinite;
-}
-
-@keyframes glowText{
-  0%{background-position:0%}
-  100%{background-position:200%}
-}
-
-
-/* ============================= */
-/* Floating photo                */
-/* ============================= */
-
-.profile-pic{
-  animation: floatPic 4s ease-in-out infinite;
-}
-
-@keyframes floatPic{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-10px)}
-}
-
-
-/* ============================= */
-/* Glass card glow hover         */
-/* ============================= */
-
-.hero-card{
-  position:relative;
-  overflow:hidden;
-}
-
-.hero-card::before{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  border-radius:20px;
-
-  background:linear-gradient(45deg,#00e5ff,#00bcd4,#00e5ff);
-  opacity:0;
-  transition:0.4s;
-  z-index:-1;
-}
-
-.hero-card:hover::before{
-  opacity:0.6;
-  filter:blur(18px);
-}
-
-
-/* ============================= */
-/* Typing cursor blink           */
-/* ============================= */
-
-#typing::after{
-  content:"|";
-  margin-left:5px;
-  animation:blink 1s infinite;
-}
-
-@keyframes blink{
-  0%,50%,100%{opacity:1}
-  25%,75%{opacity:0}
-}
-
-
-/* ============================= */
-/* Animated gradient background  */
-/* ============================= */
-
-.hero-bg{
-  position:absolute;
-  inset:0;
-  z-index:-2;
-
-  background:linear-gradient(120deg,#008b8b,#00bcd4,#009688);
-  background-size:300% 300%;
-
-  animation:bgMove 10s ease infinite;
-}
-
-@keyframes bgMove{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-.soft-grid{
-  display: grid;   /* ✅ colon added */
-
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-
-  gap: 20px;
-  margin-top: 25px;
-}
-
-.soft-item{
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(12px);
-
-  padding: 18px 20px;
-  border-radius: 14px;
-
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  transition: 0.3s;
-}
-/* ===============================
-   SOFT SKILLS — HORIZONTAL GRID
-================================ */
-
-.soft-grid{
-  display: grid;
-
-  /* 🔥 THIS LINE MAKES HORIZONTAL */
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-
-  gap: 20px;
-  margin-top: 25px;
-}
-
-
-/* individual skill card */
-.soft-item{
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-
-  padding: 18px 20px;
-  border-radius: 14px;
-
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-
-/* glow effect */
-.soft-item:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 0 22px rgba(0,255,231,0.35);
-}
-
-
-/* icon style */
-.soft-item i{
-  font-size: 18px;
-  color: #00ffe7;
-}
-
-
-/* text */
-.soft-item p{
-  margin: 0;
-}
 /* =========================================
-   🔥 FINAL HERO SPACING + CARD FIX
-   (tight + professional layout)
-========================================= */
-
-/* HERO SECTION */
-.hero{
-  min-height: auto;              /* remove full screen gap */
-  padding: 60px 20px 25px;       /* compact spacing */
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-
-/* PROFILE PHOTO */
-.profile-pic{
-  margin-bottom: 15px;
-}
-
-
-/* NAME */
-.name{
-  margin-bottom: 6px;
-}
-
-
-/* TYPING TEXT */
-.tagline{
-  margin-bottom: 8px;
-}
-
-
-/* ELECTRICAL • PLC • ETC LINE */
-.hero-sub{
-  margin-bottom: 18px;  /* tight */
-}
-
-
-/* ==============================
-   🔥 MAIN CARD (CONTACT CARD)
-============================== */
-
-.hero-card,
-.card{
-  margin-top: 18px !important;   /* bring card close */
-  padding: 22px 28px;
-  border-radius: 18px;
-}
-
-
-/* remove accidental big gaps anywhere */
-section{
-  margin-top: 25px;
-}
-
-
-/* ==============================
-   🔥 BUTTON ROW COMPACT
-============================== */
-
-.contact-row{
-  margin-top: 12px;
-}
-
-.buttons{
-  margin-top: 12px;
-}
-
-
-/* ==============================
-   🔥 SOFT SKILLS HORIZONTAL FIX
-============================== */
-
-.soft-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
-  margin-top: 20px;
-}
-/* =================================
-   🔥 FINAL HORIZONTAL LAYOUT FIX
-================================= */
-
-
-/* =========================
-   SECTION 2 CARDS SIDE-BY-SIDE
-========================= */
-
-section.card{
-  display: inline-block;
-  vertical-align: top;
-  width: 48%;
-  margin: 10px 1%;
-}
-
-
-/* responsive (mobile auto stack) */
-@media(max-width:900px){
-  section.card{
-    width:100%;
-  }
-}
-
-
-/* =========================
-   SOFT SKILLS HORIZONTAL ITEMS
-========================= */
-
-.soft-grid{
-  display: flex;          /* 👈 grid hatao, flex use karo */
-  flex-wrap: wrap;       /* next line allowed */
-  gap: 15px;
-  margin-top: 18px;
-}
-
-
-/* each skill box */
-.soft-item{
-  flex: 0 0 auto;        /* no shrink */
-  min-width: 260px;      /* fixed card size */
-}
-
-
-/* optional: tighter look */
-.soft-item{
-  padding: 14px 18px;
-}
-/* outline buttons (GitHub / Portfolio) */
-
-.btn-outline{
-  background: rgba(255,255,255,0.15);
-  color: #ffffff;
-
-  border: 1.5px solid rgba(255,255,255,0.55);
-
-  padding: 12px 22px;
-  border-radius: 10px;
-
-  font-weight: 600;
-  backdrop-filter: blur(8px);
-
-  transition: 0.3s;
-}
-
-
-/* hover glow */
-.btn-outline:hover{
-  background: #00ffe7;
-  color: #003b38;
-
-  transform: translateY(-3px);
-  box-shadow: 0 0 18px #00ffe7;
-}
-/* ================= HERO / HEADER ================= */
-
-.hero{
-    min-height:100vh;
-    background:#0a0f14;
-    color:white;
-    text-align:center;
-    padding-top:70px;
-    position:relative;
-    overflow:hidden;
-}
-
-/* animated glow bg */
-.hero-bg{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(135deg,#00ffe7,#0077ff,#00ffe7);
-    background-size:300% 300%;
-    opacity:.12;
-    animation:bgMove 12s infinite linear;
-}
-
-@keyframes bgMove{
-    0%{background-position:0 50%;}
-    100%{background-position:300% 50%;}
-}
-
-
-/* profile */
-.profile-pic{
-    width:150px;
-    border-radius:50%;
-    border:4px solid #00ffe7;
-    box-shadow:0 0 30px #00ffe7;
-    margin-bottom:20px;
-}
-
-/* name */
-.name{
-    font-size:48px;
-    font-weight:700;
-    letter-spacing:2px;
-    margin-bottom:8px;
-}
-
-/* typing text */
-.tagline{
-    font-size:22px;
-    color:#00ffe7;
-    min-height:30px;
-    margin-bottom:30px;
-}
-
-
-/* ================= CARD ================= */
-
-.hero-card{
-    background:rgba(255,255,255,.06);
-    backdrop-filter:blur(18px);
-    border-radius:22px;
-    padding:35px;
-    width:90%;
-    max-width:800px;
-    margin:auto;
-
-    box-shadow:
-        0 0 25px rgba(0,255,231,.25),
-        0 0 80px rgba(0,255,231,.15);
-
-    transition:.3s;
-}
-
-.hero-card:hover{
-    transform:translateY(-6px);
-    box-shadow:
-        0 0 35px rgba(0,255,231,.55),
-        0 0 120px rgba(0,255,231,.25);
-}
-
-/* subtitle */
-.hero-sub{
-    margin-bottom:25px;
-    font-size:18px;
-    opacity:.9;
-}
-
-
-/* ================= CONTACT ================= */
-
-.contact-row{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin-bottom:25px;
-}
-
-.contact-btn{
-    text-decoration:none;
-    color:white;
-    background:rgba(255,255,255,.08);
-    padding:10px 18px;
-    border-radius:12px;
-    transition:.3s;
-}
-
-.contact-btn:hover{
-    background:#00ffe7;
-    color:#000;
-    transform:translateY(-3px);
-}
-
-
-/* ================= BUTTONS ================= */
-
-.buttons{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-/* solid neon */
-.btn{
-    text-decoration:none;
-    background:#00ffe7;
-    color:#000;
-    padding:12px 22px;
-    border-radius:12px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-4px);
-    box-shadow:0 0 18px #00ffe7;
-}
-
-/* outline */
-.btn-outline{
-    text-decoration:none;
-    color:#00ffe7;
-    border:2px solid #00ffe7;
-    padding:12px 22px;
-    border-radius:12px;
-    transition:.3s;
-}
-
-.btn-outline:hover{
-    background:#00ffe7;
-    color:#000;
-    box-shadow:0 0 18px #00ffe7;
-}
-
-
-/* mobile */
-@media(max-width:600px){
-    .name{font-size:34px;}
-    .hero-card{padding:25px;}
-}
-/* =========================================
-   🌑 GLOBAL RESET + FONT
+🌑 GLOBAL RESET
 ========================================= */
 
 *{
@@ -1155,18 +10,20 @@ section.card{
 }
 
 html{
-  scroll-behavior:smooth;   /* smooth scroll */
+  scroll-behavior:smooth;
 }
 
 body{
-  background:#0a0f14;       /* deep black */
+  background:#0a0f14;
   color:#fff;
   line-height:1.6;
+  overflow-x:hidden;
 }
 
 
+
 /* =========================================
-   🔥 HERO SECTION
+🔥 HERO SECTION
 ========================================= */
 
 .hero{
@@ -1177,18 +34,18 @@ body{
   justify-content:center;
   text-align:center;
   position:relative;
-  padding:60px 20px;
-  overflow:hidden;
+  padding:80px 20px;
 }
 
-/* animated neon gradient bg */
+
+/* animated bg */
 .hero-bg{
   position:absolute;
   inset:0;
   background:linear-gradient(135deg,#00ffe7,#0077ff,#00ffe7);
   background-size:300% 300%;
   opacity:.12;
-  animation:bgMove 10s infinite linear;
+  animation:bgMove 10s linear infinite;
   z-index:-1;
 }
 
@@ -1198,8 +55,9 @@ body{
 }
 
 
+
 /* =========================================
-   👤 PROFILE
+👤 PROFILE
 ========================================= */
 
 .profile-pic{
@@ -1211,8 +69,8 @@ body{
   border:3px solid #00ffe7;
 
   box-shadow:
-    0 0 25px rgba(0,255,255,.6),
-    0 0 60px rgba(0,255,255,.3);
+  0 0 25px rgba(0,255,255,.6),
+  0 0 60px rgba(0,255,255,.3);
 
   margin-bottom:20px;
 }
@@ -1230,35 +88,34 @@ body{
 }
 
 
+
 /* =========================================
-   🔥 HERO GLASS CARD
+🔥 HERO CARD
 ========================================= */
 
 .hero-card{
   margin-top:30px;
-  padding:35px 45px;
+  padding:40px 50px;
 
   background:rgba(255,255,255,.05);
   backdrop-filter:blur(14px);
 
-  border-radius:22px;
+  border-radius:24px;
 
-  box-shadow:
-    0 0 30px rgba(0,255,255,.2);
+  box-shadow:0 0 30px rgba(0,255,255,.2);
 
   transition:.35s;
 }
 
 .hero-card:hover{
   transform:translateY(-8px);
-
-  box-shadow:
-    0 0 50px rgba(0,255,255,.5);
+  box-shadow:0 0 60px rgba(0,255,255,.5);
 }
 
 
+
 /* =========================================
-   📞 CONTACT BUTTONS
+📞 CONTACT BUTTONS
 ========================================= */
 
 .contact-row{
@@ -1277,23 +134,19 @@ body{
   background:rgba(255,255,255,.08);
   color:white;
 
-  backdrop-filter:blur(6px);
-
   transition:.3s;
 }
 
 .contact-btn:hover{
   background:#00ffe7;
   color:#001b20;
-
   transform:translateY(-3px);
-
-  box-shadow:0 0 18px #00ffe7;
 }
 
 
+
 /* =========================================
-   🎯 ACTION BUTTONS
+🎯 ACTION BUTTONS
 ========================================= */
 
 .buttons{
@@ -1303,17 +156,18 @@ body{
   flex-wrap:wrap;
 }
 
-/* main filled button */
-.btn{
+.btn,
+.btn-outline{
   padding:12px 24px;
   border-radius:12px;
   text-decoration:none;
   font-weight:600;
+  transition:.3s;
+}
 
+.btn{
   background:#00ffe7;
   color:#001b20;
-
-  transition:.3s;
 }
 
 .btn:hover{
@@ -1321,447 +175,104 @@ body{
   box-shadow:0 0 25px #00ffe7;
 }
 
-/* outline neon */
 .btn-outline{
-  padding:12px 24px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:600;
-
   background:rgba(255,255,255,.06);
-  color:#fff;
-
   border:1px solid rgba(0,255,255,.4);
-
-  backdrop-filter:blur(6px);
-
-  transition:.3s;
+  color:#fff;
 }
 
 .btn-outline:hover{
   background:#00ffe7;
   color:#001b20;
-
-  transform:translateY(-3px);
-
-  box-shadow:0 0 25px #00ffe7;
 }
 
 
+
 /* =========================================
-   🧩 SECTION CARDS
+🚀 PREMIUM FULL WIDTH CARDS (MAIN FIX)
 ========================================= */
 
-.card{
-  width:90%;
-  max-width:1100px;
-  margin:40px auto;
+section{
+  width:100%;
+  display:flex;
+  justify-content:center; /* center content */
+}
 
-  padding:35px;
+
+/* 🔥 THIS IS THE IMPORTANT PART */
+
+.card{
+  width:96%;              /* almost full screen */
+  max-width:1700px;       /* big laptops support */
+  margin:70px auto;
+  padding:60px 80px;
+
+  border-radius:24px;
 
   background:rgba(255,255,255,.05);
   backdrop-filter:blur(14px);
 
-  border-radius:20px;
+  border:1px solid rgba(0,255,255,.12);
 
-  border:1px solid rgba(0,255,255,.15);
+  box-shadow:0 0 30px rgba(0,255,255,.18);
 
   transition:.35s;
-
-  box-shadow:0 0 20px rgba(0,255,255,.15);
 }
 
 .card:hover{
   transform:translateY(-6px);
-  box-shadow:0 0 40px rgba(0,255,255,.45);
+  box-shadow:0 0 60px rgba(0,255,255,.4);
 }
 
 
+
 /* =========================================
-   🟢 GRID LAYOUTS
+🟢 GRIDS
 ========================================= */
 
 .project-grid,
 .skill-grid,
 .edu-grid,
-.foundation-grid{
+.foundation-grid,
+.ach-grid{
   display:grid;
   gap:20px;
-
-  grid-template-columns:
-  repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 }
 
 
+
 /* =========================================
-   🔹 SMALL CARDS
+🔹 SMALL CARDS
 ========================================= */
 
 .project-card,
 .skill-card,
 .edu-item,
-.foundation-item{
-
+.foundation-item,
+.ach-item{
   background:rgba(255,255,255,.06);
-  padding:18px;
-
-  border-radius:14px;
-
+  padding:20px;
+  border-radius:16px;
   transition:.3s;
 }
 
 .project-card:hover,
 .skill-card:hover,
 .edu-item:hover,
-.foundation-item:hover{
+.foundation-item:hover,
+.ach-item:hover{
   transform:translateY(-4px);
-  box-shadow:0 0 25px rgba(0,255,255,.3);
+  box-shadow:0 0 30px rgba(0,255,255,.35);
 }
+
 
 
 /* =========================================
-   🟢 SOFT SKILLS HORIZONTAL STYLE
-========================================= */
-
-.soft-list{
-  display:grid;
-
-  grid-template-columns:
-  repeat(auto-fit,minmax(250px,1fr));
-
-  gap:15px;
-  list-style:none;
-}
-
-.soft-list li{
-  background:rgba(255,255,255,.06);
-  padding:12px 16px;
-  border-radius:10px;
-
-  transition:.3s;
-}
-
-.soft-list li:hover{
-  background:#00ffe7;
-  color:#001b20;
-  transform:translateY(-3px);
-}
-
-
-/* =========================================
-   🔥 FOOTER
-========================================= */
-
-.footer{
-  text-align:center;
-  padding:30px 0;
-  opacity:.8;
-}
-
-
-/* =========================================
-   📱 MOBILE
-========================================= */
-
-@media(max-width:600px){
-
-  .name{
-    font-size:28px;
-  }
-
-  .hero-card{
-    padding:25px;
-  }
-}
-/* ================= GLOBAL CENTER LAYOUT FIX ================= */
-
-/* Page ko center feel dene ke liye */
-body{
-  display:flex;
-  flex-direction:column;
-  align-items:center;   /* ⭐ sab sections center */
-}
-
-
-/* All cards center + fixed width */
-.card{
-  width:90%;
-  max-width:1100px;     /* ⭐ professional centered look */
-  margin:40px auto;     /* ⭐ auto center */
-}
-
-
-/* Grids bhi center ho */
-.edu-grid,
-.skill-grid,
-.project-grid,
-.foundation-grid,
-.soft-grid,
-.ach-grid{
-  justify-content:center;
-}
-
-
-/* Lists & text center feel */
-.card h2{
-  text-align:center;
-}
-
-
-/* extra clean spacing */
-section{
-  display:flex;
-  justify-content:center;
-}
-/* ================= CARD PRO GLOW STYLE ================= */
-
-.card{
-  backdrop-filter:blur(12px);
-  box-shadow:0 0 30px rgba(0,255,255,.15);
-  border-radius:20px;
-}
-/* =========================================
-   🎯 MASTER CENTER ALIGN FIX (GLOBAL)
-========================================= */
-
-/* sab sections ko perfect center */
-section{
-  width:100%;
-  display:flex;
-  justify-content:center;
-}
-
-/* card always exact center */
-.card{
-  width:100%;
-  max-width:1000px;   /* professional centered width */
-  margin:60px auto;
-  text-align:center;  /* headings + text center */
-}
-
-/* all headings center */
-.card h2,
-.card h3{
-  text-align:center;
-  margin-bottom:25px;
-}
-
-/* grids bhi center */
-.project-grid,
-.skill-grid,
-.edu-grid,
-.foundation-grid,
-.soft-list{
-  justify-content:center;
-  align-items:stretch;
-}
-
-/* small cards content center */
-.project-card,
-.skill-card,
-.edu-item,
-.foundation-item,
-.soft-list li{
-  text-align:center;
-}
-
-/* footer center */
-.footer{
-  text-align:center;
-  display:flex;
-  justify-content:center;
-}
-/* =========================================
-   💎 SOFT SKILLS PERFECT GRID (FOR soft-grid)
+🟢 SOFT SKILLS
 ========================================= */
 
 .soft-grid{
-  width:100%;
-  max-width:900px;
-
-  margin:25px auto 0;
-
-  display:grid;
-
-  grid-template-columns:
-  repeat(auto-fit, minmax(260px, 1fr));
-
-  gap:18px;
-
-  justify-content:center;
-}
-
-/* each skill box */
-.soft-item{
-  background:rgba(255,255,255,.06);
-
-  padding:16px;
-
-  border-radius:14px;
-
-  text-align:center;
-
-  backdrop-filter:blur(10px);
-
-  border:1px solid rgba(0,255,255,.15);
-
-  transition:.3s;
-}
-
-/* icon */
-.soft-item i{
-  font-size:20px;
-  color:#00ffe7;
-  margin-bottom:8px;
-  display:block;
-}
-
-/* hover effect */
-.soft-item:hover{
-  transform:translateY(-5px);
-
-  background:#00ffe7;
-  color:#001b20;
-
-  box-shadow:0 0 20px #00ffe7;
-}
-.card h2{
-  text-align:center;
-  margin-bottom:20px;
-}
-/* =========================================
-   🌟 PRO CONTAINER SYSTEM (PERFECT CENTER)
-========================================= */
-
-section{
-  width:100%;
-  display:flex;
-  justify-content:center;
-}
-
-/* main cards */
-.card{
-  width:92%;
-  max-width:1000px;     /* premium centered width */
-  margin:70px auto;     /* equal top-bottom spacing */
-  padding:40px;
-
-  text-align:center;
-
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(16px);
-
-  border-radius:22px;
-
-  border:1px solid rgba(0,255,255,.15);
-
-  transition:.35s ease;
-
-  box-shadow:0 0 25px rgba(0,255,255,.12);
-}
-
-/* sexy hover lift */
-.card:hover{
-  transform:translateY(-8px) scale(1.01);
-  box-shadow:0 0 55px rgba(0,255,255,.45);
-}
-/* headings + text */
-.card h2,
-.card h3,
-.card p{
-  text-align:center;
-}
-
-/* all grids center */
-.project-grid,
-.skill-grid,
-.edu-grid,
-.foundation-grid{
-  justify-items:center;
-}
-
-/* small cards */
-.project-card,
-.skill-card,
-.edu-item,
-.foundation-item{
-  width:100%;
-  max-width:280px;
-  text-align:center;
-}
-/* smooth fade animation */
-.card{
-  animation:fadeUp .6s ease both;
-}
-
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(25px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-/* page side glow */
-body::before{
-  content:"";
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-
-  background:
-  radial-gradient(circle at 20% 30%, rgba(0,255,255,.08), transparent 40%),
-  radial-gradient(circle at 80% 70%, rgba(0,255,255,.08), transparent 40%);
-
-  pointer-events:none;
-  z-index:-1;
-}
-
-/* better spacing */
-.card + .card{
-  margin-top:80px;
-}
-card{
-  width:100%;              /* full width */
-  max-width:1400px;        /* bigger limit */
-  margin:40px auto;
-
-  padding:40px;
-
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(14px);
-
-  border-radius:20px;
-
-  border:1px solid rgba(0,255,255,.15);
-
-  box-shadow:0 0 20px rgba(0,255,255,.15);
-
-  text-align:center;       /* everything center */
-}
-project-grid,
-.skill-grid,
-.edu-grid,
-.foundation-grid,
-.soft-grid{
-  display:grid;
-  gap:20px;
-
-  justify-content:center;   /* center horizontally */
-  align-items:center;
-
-  grid-template-columns:
-  repeat(auto-fit,minmax(260px,1fr));
-}
-.soft-grid{
-  width:100%;
-  max-width:1000px;
-  margin:25px auto;
-
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:15px;
@@ -1778,137 +289,32 @@ project-grid,
 .soft-item:hover{
   background:#00ffe7;
   color:#001b20;
-  transform:translateY(-4px);
-  box-shadow:0 0 20px #00ffe7;
-}
-section{
-  display:flex;
-  justify-content:center;
-}
-.hero{
-  padding:60px 0;   /* REMOVE side gap */
-}
-.hero-card{
-  width:95%;
-  max-width:1400px;
-  margin:30px auto;
-
-  padding:40px;
-
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(14px);
-
-  border-radius:22px;
-
-  box-shadow:0 0 40px rgba(0,255,255,.3);
-}
-section{
-  width:100%;
-  display:flex;
-  justify-content:center;
-}
-.card{
-  width:96%;
-  max-width:1500px;
-}
-.card{
-  width:100%;          /* FULL WIDTH */
-  max-width:none;      /* REMOVE LIMIT */
-  margin:40px 0;       /* no side margin */
-
-  padding:40px 60px;   /* only inside spacing */
-
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(14px);
-
-  border-radius:0;     /* edge-to-edge look */
-
-  border-top:1px solid rgba(0,255,255,.15);
-  border-bottom:1px solid rgba(0,255,255,.15);
-
-  box-shadow:0 0 30px rgba(0,255,255,.15);
-}
-section{
-  width:100%;
-}
-hero-card{
-  width:100%;
-  max-width:none;
-  margin-top:30px;
-  padding:40px 60px;
-  border-radius:0;
-}
-section{
-  width:100vw;
-  margin-left:calc(50% - 50vw);
-}
-.card{
-  width:100%;
-  max-width:none;
-  margin:40px 0;
-  padding:50px 80px;
-
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(14px);
-
-  border-radius:0;
-}
-card{
-  box-shadow:
-  inset 0 0 80px rgba(0,255,255,.15);
-}
-section{
-  width:100%;
 }
 
-.card{
-  width:92%;              /* thoda side gap */
-  max-width:1500px;       /* big screens pe limit */
-  margin:60px auto;       /* center */
-  padding:60px 80px;
 
-  border-radius:22px;
 
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(14px);
-
-  box-shadow:0 0 30px rgba(0,255,255,.15);
-
-  transition:.35s;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 0 50px rgba(0,255,255,.35);
-}
-* =========================================
-🔥 PREMIUM FULL WIDTH CARDS (FINAL FIX)
+/* =========================================
+🔥 FOOTER
 ========================================= */
 
-section{
-  width:100%;
-  display:flex;
-  justify-content:center;
+.footer{
+  text-align:center;
 }
 
-.card{
-  width:96%;              /* almost full */
-  max-width:1600px;       /* big screens pe wide */
-  margin:50px auto;
 
-  padding:60px 80px;
 
-  border-radius:22px;
+/* =========================================
+📱 MOBILE
+========================================= */
 
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(14px);
+@media(max-width:600px){
 
-  box-shadow:0 0 35px rgba(0,255,255,.18);
+  .name{
+    font-size:28px;
+  }
 
-  transition:.35s;
-}
+  .card{
+    padding:30px 20px;
+  }
 
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 0 60px rgba(0,255,255,.4);
 }
