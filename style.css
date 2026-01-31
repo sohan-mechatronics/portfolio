@@ -1083,29 +1083,16 @@ card{
 h1,h2,h3{
   text-shadow: 0 0 12px rgba(0,255,200,.4);
 }
-/* =====================================
-   💎 SUPER INTENSE CARD GLOW
-   ===================================== */
-
+/* ===== SAFE CLEAN GLOW ===== */
 .card{
-  position:relative;
-  overflow:hidden;
-  border-radius:25px;
+  border-radius:22px;
+  overflow:visible;
+  box-shadow:0 0 25px rgba(0,255,200,.25);
 }
 
-
-/* base glow */
-.card::before{
-  content:"";
-  position:absolute;
-  inset:-4px;
-  border-radius:inherit;
-
-  background: linear-gradient(45deg,#00fff2,#00ffae,#00fff2);
-
-  filter: blur(35px);
-  opacity:.25;
-  z-index:-1;
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 45px rgba(0,255,200,.45);
 }
 
 
