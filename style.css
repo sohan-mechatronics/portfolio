@@ -1326,36 +1326,20 @@ hero{
     opacity:0;
   }
 }
-/* ===== FORCE STATIC CARDS ===== */
-.card,
-.hero-card{
-  transform: none !important;
-  animation: none !important;
-}
+
 /* ===== FINAL FIX : CARDS STATIC ===== */
-.card,
-.card:hover,
-.hero-card,
-.hero-card:hover{
-  transform: none !important;
-  translate: none !important;
-}
+
 .card{
-  transform: none !important;
-}
-/* ===== HERO MAIN CARD ===== */
-.card{
-  background: rgba(20,25,30,0.92);
+  background: rgba(15,20,22,0.95);
   border-radius: 25px;
   padding: 35px;
-  transition: 0.3s ease;
+  transition: .3s ease;
 }
 
-/* ===== CLEAN SOFT GLOW ===== */
 .card:hover{
   box-shadow:
-0 0 18px rgba(0,255,200,.35),
-0 0 30px rgba(0,255,200,.18);
+  0 8px 20px rgba(0,255,200,.18),
+  0 0 30px rgba(0,255,200,.08)
 }
 /* ===============================
    HERO CARD FINAL GLOW (STATIC + HOVER ONLY)
